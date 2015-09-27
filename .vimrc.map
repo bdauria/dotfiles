@@ -1,0 +1,18 @@
+let mapleader = "\<Space>"
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+nmap <Leader>a :RuboCop --auto-correct<CR>
+
+" Map C-s to save the file 
+noremap <silent> <C-S>          :update<CR>
+vnoremap <silent> <C-S>         <C-C>:update<CR>
+inoremap <silent> <C-S>         <C-O>:update<CR>
+
+imap àà <esc>a<Plug>snipMateNextOrTrigger
+smap àà <Plug>snipMateNextOrTrigger

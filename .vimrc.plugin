@@ -1,0 +1,34 @@
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-rails'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'thoughtbot/vim-rspec'
+Bundle 'vim-ruby/vim-ruby'
+Plugin 'stefanoverna/vim-plumber'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/snipmate-snippets'
+Plugin 'tpope/vim-cucumber'
+Plugin 'Valloric/YouCompleteMe' 
+Plugin 'ngmy/vim-rubocop'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+source ~/.vimrc.vam
+source ~/.vim/ftplugin/matchit.vim
