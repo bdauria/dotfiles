@@ -17,3 +17,4 @@ inoremap <silent> <C-S>         <C-O>:update<CR>
 imap àà <esc>a<Plug>snipMateNextOrTrigger
 smap àà <Plug>snipMateNextOrTrigger
 nmap <Leader>b :CtrlPBuffer<CR>
+map <C-n> :NERDTreeToggle<CR>
