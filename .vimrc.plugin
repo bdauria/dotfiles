@@ -25,6 +25,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-haml'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'danro/rename.vim'
+Plugin 'karlbright/qfdo.vim'
 
 call vundle#end()
 filetype plugin indent on
