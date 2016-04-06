@@ -10,7 +10,7 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'thoughtbot/vim-rspec'
 Bundle 'vim-ruby/vim-ruby'
-Plugin 'stefanoverna/vim-plumber'
+Plugin 'bdauria/vim-plumber'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'tpope/vim-surround'
@@ -26,6 +26,7 @@ Plugin 'tpope/vim-haml'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'danro/rename.vim'
 Plugin 'karlbright/qfdo.vim'
+Plugin 'tpope/vim-endwise'
 
 call vundle#end()
 filetype plugin indent on
