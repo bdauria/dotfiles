@@ -51,3 +51,7 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
+
+" Automatically save changes before switching buffer with some
+" commands, like :cnfile.
+set autowrite
