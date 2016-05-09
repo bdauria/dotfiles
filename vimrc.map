@@ -25,3 +25,12 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " bind \ (backward slash) to grep shortcut
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap \ :Ag<SPACE>
+
+" rspec-cucumber.vim mappings
+map <Leader>t :call RunCurrentTestFile()<CR>
+map <Leader>s :call RunNearestTest()<CR>
+map <Leader>l :call RunLastTest()<CR>
+map <Leader>a :call RunAllTests()<CR>
+
+map ç :ccl <CR>
+map <F2> :Copen <CR>

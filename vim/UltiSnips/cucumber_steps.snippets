@@ -1,0 +1,17 @@
+#http://wiki.yangleo.me/2013/10/29/write-UltiSnips-snippets.html
+
+# this snippet creates a step definition out of a feature definiton
+# only inconvinience is that this one displays the args list as a new line. 
+# not sure how to deal with this anyhow
+
+snippet step "create step from feature description"
+`!p num_replaced = re.sub(r'\d+', '(\d+)', snip.v.text)
+quote_replaced = re.sub(r'".*"','"([^"]*)"', num_replaced)
+snip.rv = re.sub(r'^\s*(Then|When|Given)\s*(.*)',r'\1(/^\2$/) do ', quote_replaced)`|${0:arg1}|
+
+end
+endsnippet
+
+snippet text "text_regex"
+"([^"]*)"
+endsnippet

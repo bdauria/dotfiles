@@ -35,7 +35,11 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_haml_checkers = ['haml_lint']
 
-" Put swap files away
+" vim-rspec-cucumber custom commands
+let g:rspec_command = "Dispatch rspec {test}"
+let g:cucumber_command = "Dispatch bundle exec cucumber {test}"
+
+" Put swap files away so that they can easily be removed
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
@@ -55,3 +59,9 @@ endif
 " Automatically save changes before switching buffer with some
 " commands, like :cnfile.
 set autowrite
+
+" Considen haml.js files as haml
+autocmd BufNewFile,BufRead,BufFilePost *.hamljs set filetype=haml
+
+" use matchit.vim plugin
+runtime macros/matchit.vim
