@@ -7,7 +7,8 @@ nmap <Leader>p "+p
 nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
-nmap <Leader>a :RuboCop --auto-correct<CR>
+nmap <C-a> :RuboCop --auto-correct<CR>
+nmap , :
 
 " Map C-s to save the file 
 noremap <silent> <C-S>          :update<CR>
@@ -34,3 +35,6 @@ map <Leader>a :call RunAllTests()<CR>
 
 map ç :ccl <CR>
 map <F2> :Copen <CR>
+
+" Delete the current file
+nnoremap <C-Del> :call delete(expand('%'))<CR>

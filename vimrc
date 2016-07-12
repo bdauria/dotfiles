@@ -13,20 +13,14 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-" Enable mouse use in all modes
 set mouse=a
 
-" Set this to the name of your terminal that supports mouse codes.
 set ttymouse=xterm2
 
 if &term =~ '256color'
-  " disable Background Color Erase (BCE) so that color schemes
-  " render properly when inside 256-color tmux and GNU screen.
-  " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
   set t_ut=
 endif
 
-" Syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -34,12 +28,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_haml_checkers = ['haml_lint']
+let g:syntastic_typescript_checkers = ['tslint']
 
-" vim-rspec-cucumber custom commands
 let g:rspec_command = "Dispatch rspec {test}"
 let g:cucumber_command = "Dispatch bundle exec cucumber {test}"
 
-" Put swap files away so that they can easily be removed
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
@@ -56,12 +49,13 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-" Automatically save changes before switching buffer with some
-" commands, like :cnfile.
 set autowrite
 
-" Considen haml.js files as haml
 autocmd BufNewFile,BufRead,BufFilePost *.hamljs set filetype=haml
 
-" use matchit.vim plugin
 runtime macros/matchit.vim
+
+set ignorecase
+
+set splitbelow
+set splitright
