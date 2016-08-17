@@ -28,7 +28,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_haml_checkers = ['haml_lint']
-let g:syntastic_typescript_checkers = ['tslint']
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi'] 
 
 let g:rspec_command = "Dispatch rspec {test}"
 let g:cucumber_command = "Dispatch bundle exec cucumber {test}"
@@ -52,6 +53,8 @@ endif
 set autowrite
 
 autocmd BufNewFile,BufRead,BufFilePost *.hamljs set filetype=haml
+autocmd FileType typescript JsPreTmpl markdown
+autocmd FileType typescript syn clear foldBraces 
 
 runtime macros/matchit.vim
 
@@ -59,3 +62,12 @@ set ignorecase
 
 set splitbelow
 set splitright
+
+" Use airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='powerlineish'
+let g:airline#extensions#syntastic#enabled = 1
+set laststatus=2
+
+set colorcolumn=80

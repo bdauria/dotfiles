@@ -7,10 +7,10 @@ nmap <Leader>p "+p
 nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
-nmap <C-a> :RuboCop --auto-correct<CR>
+" nmap <C-a> :RuboCop --auto-correct<CR>
 nmap , :
 
-" Map C-s to save the file 
+" Map C-s to save the file
 noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
@@ -38,3 +38,23 @@ map <F2> :Copen <CR>
 
 " Delete the current file
 nnoremap <C-Del> :call delete(expand('%'))<CR>
+
+" vim-surround mappings
+let g:surround_no_mappings = 1
+nmap ds  <Plug>Dsurround
+nmap hs  <Plug>Csurround
+nmap ys  <Plug>Ysurround
+nmap yS  <Plug>YSurround
+nmap yss <Plug>Yssurround
+nmap ySs <Plug>YSsurround
+nmap ySS <Plug>YSsurround
+xmap S   <Plug>VSurround
+xmap gS  <Plug>VgSurround
+if !hasmapto("<Plug>Isurround","i") && "" == mapcheck("<C-S>","i")
+  imap    <C-S> <Plug>Isurround
+endif
+imap      <C-G>s <Plug>Isurround
+imap      <C-G>S <Plug>ISurround
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+nnoremap <C-X> :bdelete<CR>
