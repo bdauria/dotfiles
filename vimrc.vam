@@ -22,7 +22,7 @@ call SetupVAM()
 
 " ACTIVATING PLUGINS
 
-ActivateAddons vim-snippets snipmate
+"ActivateAddons vim-snippets snipmate
 
 " use <c-x><c-p> to complete plugin names
 

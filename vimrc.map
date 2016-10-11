@@ -1,12 +1,14 @@
 let mapleader = "\<Space>"
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
-vmap <Leader>y "+y
-vmap <Leader>d "+d
-nmap <Leader>p "+p
-nmap <Leader>P "+P
-vmap <Leader>p "+p
-vmap <Leader>P "+P
+
+vmap <Leader>y 17y
+vmap <Leader>d 17d
+nmap <Leader>p 17p
+nmap <Leader>P 17P
+vmap <Leader>p 17p
+vmap <Leader>P 17P
+
 " nmap <C-a> :RuboCop --auto-correct<CR>
 nmap , :
 
@@ -15,8 +17,9 @@ noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
 
-imap àà <esc>a<Plug>snipMateNextOrTrigger
-smap àà <Plug>snipMateNextOrTrigger
+"imap àà <Plug>snipMateNextOrTrigger
+"smap àà <Plug>snipMateNextOrTrigger
+
 nmap <Leader>b :CtrlPBuffer<CR>
 map <C-n> :NERDTreeToggle<CR>
 
@@ -24,8 +27,8 @@ map <C-n> :NERDTreeToggle<CR>
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " bind \ (backward slash) to grep shortcut
-command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-nnoremap \ :Ag<SPACE>
+" command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+nnoremap \ :GrepperAg<SPACE>
 
 " rspec-cucumber.vim mappings
 map <Leader>t :call RunCurrentTestFile()<CR>
@@ -58,3 +61,58 @@ imap      <C-G>S <Plug>ISurround
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <C-X> :bdelete<CR>
+
+nnoremap <C-J> <C-]> 
+
+let g:ctrlp_prompt_mappings = {
+  \ 'PrtBS()':              ['<bs>', '<c-]>'],
+  \ 'PrtDelete()':          ['<del>'],
+  \ 'PrtDeleteWord()':      ['<c-w>'],
+  \ 'PrtClear()':           ['<c-u>'],
+  \ 'PrtSelectMove("j")':   ['<c-t>', '<down>'],
+  \ 'PrtSelectMove("k")':   ['<c-s>', '<up>'],
+  \ 'PrtSelectMove("t")':   ['<Home>', '<kHome>'],
+  \ 'PrtSelectMove("b")':   ['<End>', '<kEnd>'],
+  \ 'PrtSelectMove("u")':   ['<PageUp>', '<kPageUp>'],
+  \ 'PrtSelectMove("d")':   ['<PageDown>', '<kPageDown>'],
+  \ 'PrtHistory(-1)':       ['<c-n>'],
+  \ 'PrtHistory(1)':        ['<c-p>'],
+  \ 'AcceptSelection("e")': ['<cr>', '<2-LeftMouse>'],
+  \ 'AcceptSelection("h")': ['<c-x>', '<c-cr>'],
+  \ 'AcceptSelection("t")': ['<c-w>'],
+  \ 'AcceptSelection("v")': ['<c-v>', '<RightMouse>'],
+  \ 'ToggleFocus()':        ['<s-tab>'],
+  \ 'ToggleRegex()':        ['<c-r>'],
+  \ 'ToggleByFname()':      ['<c-d>'],
+  \ 'ToggleType(1)':        ['<c-f>', '<c-up>'],
+  \ 'ToggleType(-1)':       ['<c-b>', '<c-down>'],
+  \ 'PrtExpandDir()':       ['<tab>'],
+  \ 'PrtInsert("c")':       ['<MiddleMouse>', '<insert>'],
+  \ 'PrtInsert()':          ['<c-\>'],
+  \ 'PrtCurStart()':        ['<c-a>'],
+  \ 'PrtCurEnd()':          ['<c-e>'],
+  \ 'PrtCurLeft()':         ['<c-h>', '<left>', '<c-^>'],
+  \ 'PrtCurRight()':        ['<c-l>', '<right>'],
+  \ 'PrtClearCache()':      ['<F5>'],
+  \ 'PrtDeleteEnt()':       ['<F7>'],
+  \ 'CreateNewFile()':      ['<c-y>'],
+  \ 'MarkToOpen()':         ['<c-z>'],
+  \ 'OpenMulti()':          ['<c-o>'],
+  \ 'PrtExit()':            ['<esc>', '<c-c>', '<c-g>'],
+  \ }
+
+nmap <leader>gf :execute 'edit ' . input('folder ? ') . '/' . expand('<cfile>')<cr>
+
+" NERDTree Mapping
+
+let g:NERDTreeMapJumpNextSibling = '<C-S>'
+let g:NERDTreeMapJumpPrevSibling = '<C-T>'
+let g:NERDTreeMapJumpFirstChild = 'S'
+let g:NERDTreeMapJumpLastChild = 'T'
+let g:NERDTreeMapOpenVSplit = 'v'
+let g:NERDTreeMapOpenInTab = 'k'
+
+nmap <Leader>n :NERDTreeFind<CR>
+let g:AutoPairsShortcutToggle = 'C-E'
+
+vmap y y`]
