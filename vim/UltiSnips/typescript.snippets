@@ -1,0 +1,44 @@
+snippet ng2component
+import { Component } from '@angular/core';
+
+@Component({
+  selector: '$1',
+  templateUrl: '$2.component.html',
+	styleUrls: ['$2.component.css']
+})
+export class $3 {
+}
+endsnippet
+
+snippet ng2pipe
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({ name: '$1' })
+export class $2Pipe implements PipeTransform {
+	transform(value: $2, $3: $4): $5 {
+	  $6
+	}
+}
+endsnippet
+
+snippet ng2module
+import { NgModule } from '@angular/core';
+
+@NgModule({
+  declarations: [],
+	imports: [],
+	providers: []
+})
+export class $1 {}
+endsnippet
+
+snippet ng2directive
+import { Directive, ElementRef } from '@angular/core';
+
+@Directive({
+  selector: '[$1]'
+})
+export class $2 {
+  constructor(private el: ElementRef) {}
+}
+endsnippet
