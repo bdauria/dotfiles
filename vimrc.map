@@ -9,7 +9,7 @@ nmap <Leader>P 17P
 vmap <Leader>p 17p
 vmap <Leader>P 17P
 
-" nmap <C-a> :RuboCop --auto-correct<CR>
+" More accessible command line prompt
 nmap , :
 
 " Map C-s to save the file
@@ -17,10 +17,7 @@ noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
 
-"imap àà <Plug>snipMateNextOrTrigger
-"smap àà <Plug>snipMateNextOrTrigger
-
-nmap <Leader>b :CtrlPBuffer<CR>
+nmap <C-b> :CtrlPBuffer<CR>
 map <C-n> :NERDTreeToggle<CR>
 
 " bind K to grep word under cursor
@@ -60,9 +57,14 @@ imap      <C-G>s <Plug>Isurround
 imap      <C-G>S <Plug>ISurround
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
-nnoremap <C-X> :bdelete<CR>
 
+" Kill the current buffer without closing the corresponding split
+nnoremap <C-X> :BD<CR>
+
+" More accessible (on bépo keyboard) Jump to Tag
 nnoremap <C-J> <C-]> 
+
+" CtrlP Mappings
 
 let g:ctrlp_prompt_mappings = {
   \ 'PrtBS()':              ['<bs>', '<c-]>'],
@@ -115,4 +117,27 @@ let g:NERDTreeMapOpenInTab = 'k'
 nmap <Leader>n :NERDTreeFind<CR>
 let g:AutoPairsShortcutToggle = 'C-E'
 
+
+" always move cursor to the last line of yanked block
 vmap y y`]
+
+" EasyMotion mappings
+map  <Leader>f <Plug>(easymotion-bd-f)
+map  <Leader>w <Plug>(easymotion-bd-w)
+
+" Gif config
+map 9 <Plug>(easymotion-sn)
+omap 9 <Plug>(easymotion-tn)
+
+" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
+" Without these mappings, `n` & `N` works fine. (These mappings just provide
+" different highlight method and have some other features )
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+
+let g:UltiSnipsExpandTrigger="<c-t>"
+let g:UltiSnipsJumpForwardTrigger = "<c-t>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-s>"
+
+" Toggle Auto Pairs remapping
+let g:AutoPairsShortcutToggle = '<C-K>'
