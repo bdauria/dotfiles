@@ -17,22 +17,10 @@ set wildmenu
 
 set mouse=a
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_haml_checkers = ['haml_lint']
-
-let g:rspec_command = "Dispatch rspec {test}"
-let g:cucumber_command = "Dispatch bundle exec cucumber {test}"
-
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 
-" The Silver Searcher
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
@@ -69,13 +57,15 @@ let g:airline#extensions#syntastic#enabled = 1
 set laststatus=2
 
 " Visual mark to notice long lines
-set colorcolumn=80
+set colorcolumn=100
 
 " Use single quotes for :TsuImport
 let g:tsuquyomi_single_quote_import = 1
+let g:tsuquyomi_shortest_import_path = 1
 
 " Use Dispatch with angular-cli.vim
 let g:angular_cli_use_dispatch = 1
 
 " EasyMotion configuration
 let g:EasyMotion_smartcase = 1
+let g:deoplete#enable_at_startup = 1

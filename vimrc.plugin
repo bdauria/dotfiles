@@ -17,7 +17,6 @@ Plugin 'tpope/vim-cucumber'
 Plugin 'SirVer/ultisnips'
 Plugin 'bdauria/YouCompleteMe' 
 Plugin 'ngmy/vim-rubocop'
-Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-haml'
 Plugin 'kchmck/vim-coffee-script'
@@ -50,14 +49,24 @@ Plugin 'tpope/vim-repeat'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'bdauria/angular-cli.vim'
 Plugin 'vim-scripts/BufOnly.vim'
-Plugin 'honza/vim-snippets'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'othree/xml.vim'
 Plugin 'mhinz/vim-grepper'
 Plugin 'qpkorr/vim-bufkill'
+Plugin 'rhysd/vim-clang-format'
+Plugin 'galooshi/vim-import-js'
+Plugin 'w0rp/ale'
 
 call vundle#end()
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
+
 filetype plugin indent on
 
 source ~/.vimrc.vam

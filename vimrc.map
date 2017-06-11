@@ -27,12 +27,6 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap \ :GrepperAg<SPACE>
 
-" rspec-cucumber.vim mappings
-map <Leader>t :call RunCurrentTestFile()<CR>
-map <Leader>s :call RunNearestTest()<CR>
-map <Leader>l :call RunLastTest()<CR>
-map <Leader>a :call RunAllTests()<CR>
-
 map ç :ccl <CR>
 map <F2> :Copen <CR>
 
@@ -122,8 +116,11 @@ let g:AutoPairsShortcutToggle = 'C-E'
 vmap y y`]
 
 " EasyMotion mappings
-map  <Leader>f <Plug>(easymotion-bd-f)
-map  <Leader>w <Plug>(easymotion-bd-w)
+map  f <Plug>(easymotion-f)
+map  F <Plug>(easymotion-bd-f)
+map  <Leader>é <Plug>(easymotion-w)
+map  <Leader>É <Plug>(easymotion-bd-w)
+map <Leader>l <Plug>(easymotion-bd-jk)
 
 " Gif config
 map 9 <Plug>(easymotion-sn)
