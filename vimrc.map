@@ -1,13 +1,17 @@
 let mapleader = "\<Space>"
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
+nmap <Leader>p "+p
+map <C-p> :FZF<CR>
+map <C-b> :BLines<CR>
+map <Leader>t :BTags<CR>
+map <Leader>a :Ag<CR>
 
-vmap <Leader>y 17y
-vmap <Leader>d 17d
-nmap <Leader>p 17p
-nmap <Leader>P 17P
-vmap <Leader>p 17p
-vmap <Leader>P 17P
+let g:fzf_action = {
+  \ 'ctrl-j': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' 
+  \ }
 
 " More accessible command line prompt
 nmap , :
@@ -17,7 +21,6 @@ noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
 
-nmap <C-b> :CtrlPBuffer<CR>
 map <C-n> :NERDTreeToggle<CR>
 
 " bind K to grep word under cursor
@@ -111,7 +114,6 @@ let g:NERDTreeMapOpenInTab = 'k'
 nmap <Leader>n :NERDTreeFind<CR>
 let g:AutoPairsShortcutToggle = 'C-E'
 
-
 " always move cursor to the last line of yanked block
 vmap y y`]
 
@@ -121,14 +123,8 @@ map  F <Plug>(easymotion-bd-f)
 map  <Leader>é <Plug>(easymotion-w)
 map  <Leader>É <Plug>(easymotion-bd-w)
 map <Leader>l <Plug>(easymotion-bd-jk)
-
-" Gif config
-map 9 <Plug>(easymotion-sn)
-omap 9 <Plug>(easymotion-tn)
-
-" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
-" Without these mappings, `n` & `N` works fine. (These mappings just provide
-" different highlight method and have some other features )
+map <Leader>/ <Plug>(easymotion-sn)
+omap <Leader>/ <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 
@@ -136,5 +132,18 @@ let g:UltiSnipsExpandTrigger="<c-t>"
 let g:UltiSnipsJumpForwardTrigger = "<c-t>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-s>"
 
-" Toggle Auto Pairs remapping
 let g:AutoPairsShortcutToggle = '<C-K>'
+
+map <Leader>f :ClangFormat<CR>
+
+" Neocomplete mappings
+
+inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+endfunction
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"

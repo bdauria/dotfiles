@@ -14,58 +14,50 @@ set shiftwidth=2
 set expandtab
 set hidden
 set wildmenu
-
+set autowrite
 set mouse=a
+set ignorecase
+set splitbelow
+set splitright
 
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
-
-" autowrite when switching buffers
-set autowrite
-
-autocmd BufNewFile,BufRead,BufFilePost *.hamljs set filetype=haml
-
-" go to matching closing element using %
 runtime macros/matchit.vim
 
-" Ignore case for searching
-set ignorecase
-
-" Open new split below instead of above
-set splitbelow
-
-" Open new vsplit on the right instead of left
-set splitright
-
-" Use airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='powerlineish'
-let g:airline#extensions#syntastic#enabled = 1
+
 set laststatus=2
+set colorcolumn=80
 
-" Visual mark to notice long lines
-set colorcolumn=100
-
-" Use single quotes for :TsuImport
-let g:tsuquyomi_single_quote_import = 1
-let g:tsuquyomi_shortest_import_path = 1
-
-" Use Dispatch with angular-cli.vim
 let g:angular_cli_use_dispatch = 1
-
-" EasyMotion configuration
 let g:EasyMotion_smartcase = 1
-let g:deoplete#enable_at_startup = 1
+
+" Set up vertical vs block cursor for insert/normal mode
+if &term =~ "screen."
+    let &t_ti.="\eP\e[1 q\e\\"
+    let &t_SI.="\eP\e[5 q\e\\"
+    let &t_EI.="\eP\e[1 q\e\\"
+    let &t_te.="\eP\e[0 q\e\\"
+else
+    let &t_ti.="\<Esc>[1 q"
+    let &t_SI.="\<Esc>[5 q"
+    let &t_EI.="\<Esc>[1 q"
+    let &t_te.="\<Esc>[0 q"
+endif
+
+" Neocomplete settings
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns = {}
+endif
