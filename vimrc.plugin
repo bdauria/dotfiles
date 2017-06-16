@@ -50,6 +50,7 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'rhysd/vim-clang-format'
 Plug 'galooshi/vim-import-js'
 Plug 'Shougo/neocomplete.vim'
+Plug 'mhartington/vim-angular2-snippets'
 
 call plug#end()
 

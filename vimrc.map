@@ -4,6 +4,7 @@ nmap <CR> o<Esc>
 nmap <Leader>p "+p
 map <C-p> :FZF<CR>
 map <C-b> :BLines<CR>
+map <C-g> :GitFiles<CR>
 map <Leader>t :BTags<CR>
 map <Leader>a :Ag<CR>
 
@@ -128,9 +129,9 @@ omap <Leader>/ <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 
-let g:UltiSnipsExpandTrigger="<c-t>"
-let g:UltiSnipsJumpForwardTrigger = "<c-t>"
-let g:UltiSnipsJumpBackwardTrigger = "<c-s>"
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-space>"
 
 let g:AutoPairsShortcutToggle = '<C-K>'
 
@@ -144,6 +145,8 @@ inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
   return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
 endfunction
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-t>  pumvisible() ? "\<C-n>" : "\<C-t>"
+inoremap <expr><C-s>  pumvisible() ? "\<C-p>" : "\<C-s>"
+"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
