@@ -52,6 +52,7 @@ Plug 'galooshi/vim-import-js'
 Plug 'Shougo/neocomplete.vim'
 Plug 'mhartington/vim-angular2-snippets'
 Plug 'honza/vim-snippets'
+Plug 'sbdchd/neoformat'
 
 call plug#end()
 
