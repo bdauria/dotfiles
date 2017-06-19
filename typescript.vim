@@ -13,3 +13,9 @@ map <leader>r :TsuReferences<CR>
 map <leader>d :TsuDefinition<CR>
 map <leader>z :TsuRenameSymbol<CR>
 map <leader>o :TsuImport<CR>
+
+let g:neoformat_typescript_prettier = {
+      \ 'exe': 'prettier',
+      \ 'args': ['--stdin', '--single-quote', '--parser typescript'],
+	  \ 'stdin': 1
+      \ }
