@@ -1,10 +1,16 @@
 set nocompatible 
+set termencoding=utf8 
+set encoding=utf8
+set term=xterm 
+set t_Co=256 
+let &t_AB="\e[48;5;%dm"
+let &t_AF="\e[38;5;%dm"
 
 source ~/.vimrc.bepo
 source ~/.vimrc.plugin
 source ~/.vimrc.map
 
-colorscheme Monokai
+colorscheme monokai
 syntax enable
 set autoindent
 set number
@@ -15,10 +21,12 @@ set expandtab
 set hidden
 set wildmenu
 set autowrite
+set autoread
 set mouse=a
 set ignorecase
 set splitbelow
 set splitright
+set synmaxcol=120
 
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
@@ -35,19 +43,6 @@ set colorcolumn=80
 
 let g:angular_cli_use_dispatch = 1
 let g:EasyMotion_smartcase = 1
-
-" Set up vertical vs block cursor for insert/normal mode
-if &term =~ "screen."
-  let &t_ti.="\eP\e[1 q\e\\"
-  let &t_SI.="\eP\e[5 q\e\\"
-  let &t_EI.="\eP\e[1 q\e\\"
-  let &t_te.="\eP\e[0 q\e\\"
-else
-  let &t_ti.="\<Esc>[1 q"
-  let &t_SI.="\<Esc>[5 q"
-  let &t_EI.="\<Esc>[1 q"
-  let &t_te.="\<Esc>[0 q"
-endif
 
 " Neocomplete settings
 let g:acp_enableAtStartup = 0
@@ -68,3 +63,6 @@ let g:ale_sign_warning = '--'
 
 " Activate angular-cli.vim if @angular is present in the node_modules folder.
 autocmd VimEnter * if globpath('.,..','node_modules/@angular') != '' | call angular_cli#init() | endif
+
+set backspace=2
+set backspace=indent,eol,start
