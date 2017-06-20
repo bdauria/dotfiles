@@ -150,3 +150,6 @@ inoremap <expr><C-s>  pumvisible() ? "\<C-p>" : "\<C-s>"
 "inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+
+inoremap <Char-0x07F> <BS>
+nnoremap <Char-0x07F> <BS>
