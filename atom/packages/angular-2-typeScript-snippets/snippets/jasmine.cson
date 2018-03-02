@@ -1,0 +1,100 @@
+'.source.ts':
+  'Jamine teardown for suite':
+    'prefix': 'afterAll'
+    'description': 'Jasmine teardown function to run after all specs of a suite'
+    'descriptionMoreURL': 'https://jasmine.github.io/api/2.6/global.html#afterAll'
+    'body':"""
+    afterAll(($1) => {
+      $2
+    }, ${3:jasmine.DEFAULT_TIMEOUT_INTERVAL});
+    """
+
+  'Jamine teardown for spec':
+    'prefix': 'afterEach'
+    'description': 'Jasmine teardown function to run after each spec of a suite'
+    'descriptionMoreURL': 'https://jasmine.github.io/api/2.6/global.html#afterEach'
+    'body':"""
+    afterEach(($1) => {
+      $2
+    }, ${3:jasmine.DEFAULT_TIMEOUT_INTERVAL});
+    """
+
+  'Jamine setup for suite':
+    'prefix': 'beforeAll'
+    'description': 'Jasmine setup function to run before all specs of a suite'
+    'descriptionMoreURL': 'https://jasmine.github.io/api/2.6/global.html#beforeAll'
+    'body':"""
+    beforeAll(($1) => {
+      $2
+    }, ${3:jasmine.DEFAULT_TIMEOUT_INTERVAL});
+    """
+
+  'Jamine setup for spec':
+    'prefix': 'beforeEach'
+    'description': 'Jasmine setup function to run before each spec of a suite'
+    'descriptionMoreURL': 'https://jasmine.github.io/api/2.6/global.html#beforeEach'
+    'body':"""
+    beforeEach(($1) => {
+      $2
+    }, ${3:jasmine.DEFAULT_TIMEOUT_INTERVAL});
+    """
+
+  'Jasmine test suite':
+    'prefix': 'describe'
+    'description': 'Jasmine describe snippet'
+    'descriptionMoreURL': 'https://jasmine.github.io/api/2.6/global.html#describe'
+    'body': """
+    describe('${1:description}' => {
+      ${2:body}
+    });
+    """
+
+  'Jasmine focused test suite':
+    'prefix': 'fdescribe'
+    'description': 'Jasmine describe snippet'
+    'descriptionMoreURL': 'https://jasmine.github.io/api/2.6/global.html#fdescribe'
+    'body': """
+    fdescribe('${1:description}' => {
+      ${2:body}
+    });
+    """
+
+  'Jasmine focused single spec':
+    'prefix': 'fit'
+    'description': 'Jasmine it snippet'
+    'descriptionMoreURL': 'https://jasmine.github.io/api/2.6/global.html#fit'
+    'body': """
+    fit('${1:description}' => {
+      ${2:body}
+    }, ${3:jasmine.DEFAULT_TIMEOUT_INTERVAL});
+    """
+
+  'Jasmine single spec':
+    'prefix': 'it'
+    'description': 'Jasmine it snippet'
+    'descriptionMoreURL': 'https://jasmine.github.io/api/2.6/global.html#it'
+    'body': """
+    it('${1:description}' => {
+      ${2:body}
+    }, ${3:jasmine.DEFAULT_TIMEOUT_INTERVAL});
+    """
+
+  'Jasmine excluded test suite':
+    'prefix': 'xdescribe'
+    'description': 'Jasmine describe snippet'
+    'descriptionMoreURL': 'https://jasmine.github.io/api/2.6/global.html#xdescribe'
+    'body': """
+    xdescribe('${1:suite}' => {
+      ${2:body}
+    });
+    """
+
+  'Jasmine excluded single spec':
+    'prefix': 'xit'
+    'description': 'Jasmine it snippet'
+    'descriptionMoreURL': 'https://jasmine.github.io/api/2.6/global.html#xit'
+    'body': """
+    xit('${1:description}' => {
+      ${2:body}
+    }, ${3:jasmine.DEFAULT_TIMEOUT_INTERVAL});
+    """

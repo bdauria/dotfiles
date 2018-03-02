@@ -1,0 +1,91 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117108-94074-1qn9mxc.ygb7ec23xr/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117108-94074-1qn9mxc.ygb7ec23xr/package.tgz",
+        "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117108-94074-1qn9mxc.ygb7ec23xr/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-117108-94074-vib8d.26ts0v0a4i"
+    ]
+  ],
+  "_from": "../d-117108-94074-1qn9mxc.ygb7ec23xr/package.tgz",
+  "_id": "expand-region@0.4.0",
+  "_inCache": true,
+  "_location": "/expand-region",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117108-94074-1qn9mxc.ygb7ec23xr/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117108-94074-1qn9mxc.ygb7ec23xr/package.tgz",
+    "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117108-94074-1qn9mxc.ygb7ec23xr/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117108-94074-1qn9mxc.ygb7ec23xr/package.tgz",
+  "_shasum": "a0d01b05a401abfbda4c7c463c293eb888ce8289",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117108-94074-1qn9mxc.ygb7ec23xr/package.tgz",
+  "_where": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-117108-94074-vib8d.26ts0v0a4i",
+  "activationCommands": {
+    "atom-text-editor": [
+      "expand-region:expand",
+      "expand-region:shrink",
+      "expand-region:select-scope",
+      "expand-region:select-fold",
+      "expand-region:select-word-include-dash",
+      "expand-region:select-word-include-dash-and-dot",
+      "expand-region:select-inside-paragraph",
+      "expand-region:select-inside-single-quotes",
+      "expand-region:select-inside-double-quotes",
+      "expand-region:select-inside-back-ticks",
+      "expand-region:select-inside-parentheses",
+      "expand-region:select-inside-curly-brackets",
+      "expand-region:select-inside-angle-brackets",
+      "expand-region:select-inside-square-brackets",
+      "expand-region:select-inside-tags",
+      "expand-region:select-tag-attribute",
+      "expand-region:select-around-single-quotes",
+      "expand-region:select-around-double-quotes",
+      "expand-region:select-around-back-ticks",
+      "expand-region:select-around-parentheses",
+      "expand-region:select-around-curly-brackets",
+      "expand-region:select-around-angle-brackets",
+      "expand-region:select-around-square-brackets"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/aki77/atom-expand-region/issues"
+  },
+  "dependencies": {
+    "underscore-plus": "~1.6.6"
+  },
+  "description": "expanding selection",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.22.0 <2.0.0"
+  },
+  "homepage": "https://github.com/aki77/atom-expand-region#readme",
+  "keywords": [
+    "selection"
+  ],
+  "license": "MIT",
+  "main": "./lib/main",
+  "name": "expand-region",
+  "optionalDependencies": {},
+  "readme": "# expand-region package\n\nexpanding selection\n[![Build Status](https://travis-ci.org/aki77/atom-expand-region.svg)](https://travis-ci.org/aki77/atom-expand-region)\n\n[![Gyazo](http://i.gyazo.com/345e05e29cc1e6e1d103f49d50c52b01.gif)](http://gyazo.com/345e05e29cc1e6e1d103f49d50c52b01)\n\nInspired by [vim-expand-region](https://github.com/terryma/vim-expand-region)\n\n## Features\n\n* Support for multiple cursors.\n* You can easily customize.\n* Support for html tags.([emmet](https://atom.io/packages/emmet) package is required.)\n\n## Keymap\n\nNo keymap by default.\n\nedit `~/.atom/keymap.cson`\n\n```\n'atom-text-editor':\n  'alt-up': 'expand-region:expand'\n  'alt-down': 'expand-region:shrink'\n```\n\n## Customize selected regions\n\nFollow [the Atom guide](http://flight-manual.atom.io/behind-atom/sections/scoped-settings-scopes-and-scope-descriptors) on language-specific configuration to adjust how regions are selected per language. Edit `~/.atom/config.cson` and use the [default settings](https://github.com/aki77/atom-expand-region/blob/master/settings/expand-region.cson) as a reference.\n\nFor example, if you want to select words with dashes first in CSS (instead of words without dashes), you could change your `config.cson` to something like:\n\n```cson\n'.source.css':\n  'expand-region':\n    commands: [\n      # Note how `expand-region:select-word` is no longer here\n      # like it is in the defaults\n      {\n        command: 'expand-region:select-word-include-dash',\n        recursive: false\n      }\n      # etc...\n    ]\n```\n\nAnd now if you expanded while your cursor was—for example—between `x` and `t` in `text-align`, rather than selecting `text` first, you'd select the whole `text-align` property.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aki77/atom-expand-region.git"
+  },
+  "version": "0.4.0"
+}

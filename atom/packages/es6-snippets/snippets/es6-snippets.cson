@@ -1,0 +1,91 @@
+'.source.js':
+
+  'import':
+    'prefix': 'imp'
+    'body': 'import $1 from ${2:"module-name"};'
+
+  'importAs':
+    'prefix': 'impas'
+    'body': 'import ${1:name} as ${2:alias} from ${3:"module-name"};'
+
+  'importMember':
+   'prefix': 'impm'
+   'body': 'import {${1:member}} from ${2:"module-name"};'
+
+  'importMemberAsAlias':
+   'prefix': 'impmas'
+   'body': 'import {${1:member} as ${2:alias}} from ${3:"module-name"};'
+
+   'importAll':
+     'prefix': 'imp*'
+     'body': 'import * as ${1:alias} from ${2:"module-name"};'
+
+
+  'exportFunction':
+    'prefix': 'exf'
+    'body': 'export function ${1:functionName} () {\n\t\n};\n'
+
+
+  'exportDefaultFunction':
+    'prefix': 'exdf'
+    'body': 'export default function ${1:functionName} () {\n\t\n};\n'
+
+  'exportClass':
+    'prefix': 'exc'
+    'body': 'export default class ${1:className} () {\n\t\n};\n'
+
+  'exportClassExtends':
+    'prefix': 'exec'
+    'body': 'export default class ${1:className} extends ${2:baseClass} () {\n\t\n};\n'
+
+  'constructor':
+    'prefix': 'con'
+    'body': 'constructor (${1:params}) {\n\t\n};\n'
+
+  'method':
+    'prefix': 'meth'
+    'body': '${1:methodName} (${2:params}) {\n\t\n};\n'
+
+  'get':
+    'prefix': 'get'
+    'body': 'get ${1:prop}() {\n\treturn ;\n}'
+
+  'set':
+    'prefix': 'set'
+    'body': 'set ${1:prop}(${2:value}) {\n\t\n}'
+
+  'namedFunction':
+    'prefix': 'nfn'
+    'body': 'const ${1:functionName} = (${2:params}) => {\n\t\n}'
+
+  'arrowFunctionOneParam':
+    'prefix': 'arrp'
+    'body': '${1:param} => {\n\t\n}'
+
+  'arrowFunctionParams':
+    'prefix': 'arrps'
+    'body': '(${1:params}) => {\n\t\n}'
+
+  'arrowFunctionNoParams':
+    'prefix': 'arr'
+    'body': '() => {\n\t\n}'
+
+  'setTimeout':
+    'prefix': 'st'
+    'body': 'setTimeout(() => {\n\t\n}, ${1:delay});'
+
+  'setInterval':
+    'prefix': 'si'
+    'body': 'setInterval(() => {\n\t\n}, ${1:delay});'
+
+  'forOf':
+    'prefix': 'foro'
+    'body': 'for(let ${1:value} of ${2:iterable}) {\n\t\n}'
+
+  'forIn':
+    'prefix': 'fori'
+    'body': 'for(let ${1:prop} in ${2:obj}) {\n\t\n}'
+
+  'generator':
+    'prefix': 'gen'
+    'body': 'function* ${1:functionName} () {\n\t yield \n\t\n};\n'

@@ -1,0 +1,34 @@
+{
+  "name": "nuclide-hhvm",
+  "main": "./lib/main.js",
+  "version": "0.0.0",
+  "atomTestRunner": "../../lib/test-runner-entry.js",
+  "nuclide": {
+    "packageType": "Atom",
+    "testRunner": "apm"
+  },
+  "consumedServices": {
+    "nuclide.task-runner": {
+      "versions": {
+        "0.0.0": "consumeTaskRunnerServiceApi"
+      }
+    },
+    "nuclide-current-working-directory": {
+      "versions": {
+        "0.0.0": "consumeCwdApi"
+      }
+    },
+    "nuclide-remote-projects": {
+      "versions": {
+        "0.0.0": "consumeRemoteProjectsService"
+      }
+    },
+    "nuclide-deep-link.provider": {
+      "versions": {
+        "0.0.0": "consumeDeepLinkService"
+      }
+    }
+  },
+  "description": "Provides HHVM debug tasks",
+  "author": "NEEDS OWNER"
+}

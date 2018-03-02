@@ -1,0 +1,45 @@
+{
+  "name": "nuclide-health",
+  "main": "./lib/main.js",
+  "version": "0.0.0",
+  "description": "Provides some simple process stats in the status bar",
+  "author": "NEEDS OWNER",
+  "atomTestRunner": "../../lib/test-runner-entry.js",
+  "nuclide": {
+    "configMetadata": {
+      "pathComponents": [
+        "IDE",
+        "Health"
+      ]
+    },
+    "config": {
+      "analyticsTimeout": {
+        "title": "Analytics Send Interval",
+        "order": 0,
+        "type": "integer",
+        "default": 20,
+        "description": "Polling interval for sending aggregated health stats as analytics (in minutes).",
+        "minimum": 1,
+        "maximum": 60
+      },
+      "viewTimeout": {
+        "title": "View Refresh Interval",
+        "order": 1,
+        "type": "integer",
+        "default": 20,
+        "description": "Polling interval for showing health stats in status views (in seconds).",
+        "minimum": 1,
+        "maximum": 60
+      }
+    },
+    "packageType": "Atom",
+    "testRunner": "apm"
+  },
+  "consumedServices": {
+    "tool-bar": {
+      "versions": {
+        "^1.0.0": "consumeToolBar"
+      }
+    }
+  }
+}

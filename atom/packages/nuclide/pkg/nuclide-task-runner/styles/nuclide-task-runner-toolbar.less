@@ -1,0 +1,81 @@
+@import 'ui-variables';
+
+@nuclide-task-runner-button-inner-padding: 8px;
+
+.nuclide-task-runner-toolbar {
+  flex: 1;
+
+  // Anything you want to overflow (e.g. dropdowns) must be rendered outside of
+  // this element. That way, we can make sure that our normal contents don't
+  // wind up on top of elements they shouldn't.
+  overflow: hidden;
+
+  &.disabled {
+    pointer-events: none;
+  }
+}
+
+.nuclide-task-runner-toolbar-contents {
+  display: flex;
+  flex: 1;
+}
+
+.nuclide-task-runner-task-runner-icon-wrapper {
+  display: flex;
+  align-items: center;
+  height: 16px;
+  width: 21px;
+  margin-right: 5px;
+
+  .icon-nuclicon-relay {
+    display: flex;
+  }
+
+  // If text is used instead of an icon, let's style it like this.
+  font-variant: small-caps;
+  text-transform: lowercase;
+
+  .icon-path-fill {
+    fill: @text-color;
+  }
+}
+
+.nuclide-task-runner-task-runner-button,
+.nuclide-task-runner-task-runner-icon,
+.nuclide-task-runner-task-runner-icon::before {
+  display: flex;
+  align-items: center;
+}
+
+// Ramp up the specificity to overcome the icon font size rule.
+.nuclide-task-runner-system-task-icon.nuclide-task-runner-system-task-icon {
+  &::before {
+    height: 11px;
+    font-size: 11px;
+    width: auto;
+  }
+}
+
+// The shortcut toolbar (suda/tool-bar) button
+.nuclide-task-runner-tool-bar-button[hidden] {
+  display: none;
+}
+
+// The shortcut toolbar (suda/tool-bar) button
+.nuclide-task-runner-tool-bar-button[hidden] {
+  display: none;
+}
+
+.nuclide-task-button {
+  min-width: 35px;
+}
+
+.nuclide-task-runner-task-runner-button {
+  display: flex;
+  justify-content: space-between;
+
+  .nuclide-dropdown-label-text-wrapper {
+    min-width: 35px;
+    margin-right: @nuclide-task-runner-button-inner-padding;
+  }
+}

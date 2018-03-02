@@ -1,0 +1,20 @@
+{
+  "name": "nuclide-url-hyperclick",
+  "main": "./lib/main.js",
+  "version": "0.0.0",
+  "description": "Uses hyperclick to open URLs in the browser",
+  "author": "NEEDS OWNER",
+  "atomTestRunner": "../../lib/test-runner-entry.js",
+  "nuclide": {
+    "packageType": "Atom",
+    "testRunner": "apm"
+  },
+  "activationCommands": {},
+  "providedServices": {
+    "hyperclick": {
+      "versions": {
+        "0.1.0": "getHyperclickProvider"
+      }
+    }
+  }
+}

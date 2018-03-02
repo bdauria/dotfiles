@@ -1,0 +1,148 @@
+'.source.ts':
+  'Angular Component':
+    'prefix': 'ng2-component'
+    'description': 'Angular 2 component snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/api/core/Component-decorator.html'
+    'body': """
+    import { Component, OnInit } from '@angular/core';
+
+    @Component({
+      selector: '${1:selector}',
+      templateUrl: '${2:component-name}.component.html',
+    })
+    export class ${3:name}Component implements OnInit {
+      constructor() { $4 }
+
+      ngOnInit() {}
+    }
+    """
+
+  'Angular Module':
+    'prefix': 'ng2-module'
+    'description': 'Angular 2 module-snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/guide/ngmodule.html'
+    'body': """
+    import { NgModule } from '@angular/core';
+
+    @NgModule({
+      imports: [$2],
+      declarations: [$3],
+      providers: [$4]
+    })
+    export class ${1:modulename} { }
+    $5
+    """
+
+  'Angular @Input':
+    'prefix': 'ng2-input'
+    'description': 'Angular 2 input snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/api/core/index/Input-var.html'
+    'body': """
+    @Input() ${1:property}: ${2:type};$3
+    """
+  'Angular @Output':
+    'prefix': 'ng2-output'
+    'description': 'Angular 2 output snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/api/core/index/Output-var.html'
+    'body': """
+    @Output() ${1:event}: EventEmitter<${2:type}> = new EventEmitter();$3
+    """
+  'Import Statement':
+    'prefix': 'ng2-import'
+    'description': 'Imports a Module from another file'
+    'descriptionMoreURL': 'https://www.typescriptlang.org/docs/handbook/namespaces-and-modules.html'
+    'body': """
+    import {${2:Module}} from '${1:path-to-source}';$3
+    """
+  'Angular Directive':
+    'prefix': 'ng2-directive'
+    'description': 'Angular 2 directive snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/guide/structural-directive.html'
+    'body': """
+    import { Directive, Input } from '@angular/core';
+
+    @Directive({ selector: '[${1:selector}]' })
+    export class ${2:DirectiveName}Directive {
+      $3
+    }
+    """
+  'Angular Service':
+    'prefix': 'ng2-service'
+    'description': 'Angular 2 service snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/api/core/index/Injectable-decorator.html'
+    'body': """
+    import { Injectable } from '@angular/core';
+
+    @Injectable()
+    export class ${1:name}Service {
+      constructor() { $2 }
+    }
+    """
+  'Angular Pipe':
+    'prefix': 'ng2-pipe'
+    'description': 'Angular 2 pipe snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/guide/pipes.html'
+    'body': """
+    import { Pipe, PipeTransform } from '@angular/core';
+
+    @Pipe({
+      name: '${1:name}'
+    })
+    export class ${2:name}Pipe implements PipeTransform {
+      transform(value: ${3:type}, args: any[]): ${3:type} {
+        return $0;
+      }
+    }
+    """
+  'Angular Routes':
+    'prefix': 'ng2-routes'
+    'description': 'Angular 2 route config snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/api/router/Route-class.html'
+    'body': """
+     import { RouterModule, Routes } from '@angular/router';
+
+     const app_routes: Routes = [
+       { path: '${1:routePath}', component: ${2:Component} },
+       { path: '**', pathMatch: 'full', redirectTo: '$1' }
+     ];
+
+     export const app_routing = RouterModule.forRoot(app_routes);
+     $3
+    """
+  'Angular Route Definition':
+    'prefix': 'ng2-route-path'
+    'description': 'Angular 2 route path snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/api/router/Route-class.html'
+    'body': """
+      { path: '/${1:path}', component: ${2:component} }$3
+    """
+  'Http.get':
+    'prefix': 'ng2-http-get'
+    'description': 'Angular 2 Http.get snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/js/latest/guide/server-communication.html'
+    'body': """
+    return this.http
+      .get('${1:url}')
+      .map((res: Response) => res.json()$2);
+    """
+  'Subscribe':
+    'prefix': 'ng2-subscribe'
+    'description': 'Angular 2 observable subscribe snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/guide/server-communication.html'
+    'body': """
+    this.${1:service}.${2:function}
+        .subscribe(${3:arg} => this.${4:property} = $3});
+    $5
+    """
+  'Angular Bootstrapping':
+    'prefix': 'ng2-bootstrap'
+    'description': 'Angular bootstraps() snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/api/platform-browser-dynamic/index/bootstrap-function.html'
+    'body': """
+    import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+    import { enableProdMode } from '@angular/core';
+    import { ${1:AppModuleName} } from './${2:path}.module';
+
+    //enableProdMode(); //Uncomment for production
+    platformBrowserDynamic().bootstrapModule($1);$3
+    """

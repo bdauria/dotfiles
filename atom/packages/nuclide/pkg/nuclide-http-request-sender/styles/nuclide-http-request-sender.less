@@ -1,0 +1,42 @@
+@import 'ui-variables';
+
+.nuclide-http-request-sender-headers {
+  display: flex;
+  height: 20em;
+  border: 1px solid @input-border-color;
+  border-radius: @component-border-radius;
+  padding: @component-padding;
+  overflow: auto;
+}
+
+.nuclide-http-request-sender-button-group {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: @component-padding;
+}
+
+.nuclide-edit-request-method-select {
+  margin-bottom: 0.75em;
+}
+
+.nuclide-parameter-container {
+  display: flex;
+  justify-content: space-between;
+  .nuclide-parameter-button {
+    height: 2.5em;
+    width: 6%;
+  }
+}
+
+.nuclide-parameter-input-container {
+  display: flex;
+  justify-content: space-between;
+  // Width is set so that there is space between this container
+  // and the nuclide-parameter-button
+  width: 92%;
+  > * {
+    // Width is set so that there is space between the two
+    // child components of this container (key and value input)
+    width: 49%
+  }
+}

@@ -1,0 +1,35 @@
+
+  <div class="syntax-scopes-details">
+    <p>Data Binding Built-in Directives and Pipe Operator syntax:</p>
+    <ul class="list-block">
+      <li class="one-way" title="Hello {{interpolation}}">Binding from data source to view target</li>
+      <li class="one-way"><img src="{{interpolation}}">Binding from data source to view target</li>
+      <li class="one-way">Binding from data source to view target: {{interpolation}}</li>
+      <li class="one-way" bind-target="expression">Binding from data source to view target</li>
+      <li class="one-way" [target]="expression">Binding from data source to view target</li>
+      <li class="one-way" on-target="expression">Binding from view target to data source</li>
+      <li class="one-way" (target)="expression">Binding from view target to data source</li>
+      <li class="two-way" bindon-target="expression">Two-way binding</li>
+      <li class="two-way" [(bananabox)]="expression">Two-way binding</li>
+      <li class="directive" [built-in.directive]="expression"></li>
+      <li class="directive" [built-in.directive]="expression"></li>
+      <li class="directive" (on.directive)="expression"></li>
+      <li class="directive" *ngIf="expression">Built-in directive</li>
+      <li class="directive" *ngFor="expression">Built-in directive</li>
+      <li class="directive" *ngSwitchCase="expression">Built-in directive</li>
+      <li class="directive" *NgSwitchDefault = "expression">Built-in directive</li>
+      <li class="pipe-operator">Pipe Operator: {{ target | operator | chain }}</li>
+      <li class="interpolation">Syntax: {{ this.name + "-string" | lowercase }}</li>
+      <li class="interpolation">Syntax: {{ this.getName() | lowercase }}</li>
+      <li class="interpolation">Syntax: {{ getName(this.name + "string") | lowercase }}</li>
+      <li class="interpolation">Syntax: {{ (condition) ? true : false | lowercase }}</li>
+      <li class="interpolation">Syntax: {{ (condition) ? this.firstname : this.lastname | lowercase }}</li>
+    </ul>
+  </div>
+
+  <!-- Examples of template tag -->
+  <template-tag></template-tag>   <template-tag> </template-tag>
+  <custom-tag template="ngFor let hero of heroes; trackBy:trackByHeroes" [hero]="hero"></custom-tag>
+  <custom-tag ngFor let-target [ngForOf]="targets" [ngForTrackBy]="trackByTargets">
+    <custom-child [target]="target"></custom-child>
+  </custom-tag>

@@ -1,0 +1,150 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11815-91699-172pvz9.irsru23xr/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11815-91699-172pvz9.irsru23xr/package.tgz",
+        "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11815-91699-172pvz9.irsru23xr/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-11815-91699-167yla6.p7g1n0cnmi"
+    ]
+  ],
+  "_from": "../d-11815-91699-172pvz9.irsru23xr/package.tgz",
+  "_id": "cursor-history@0.13.0",
+  "_inCache": true,
+  "_location": "/cursor-history",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11815-91699-172pvz9.irsru23xr/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11815-91699-172pvz9.irsru23xr/package.tgz",
+    "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11815-91699-172pvz9.irsru23xr/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-11815-91699-172pvz9.irsru23xr/package.tgz",
+  "_shasum": "ac406b676156de89d8ad634c81348f48c35c1c26",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11815-91699-172pvz9.irsru23xr/package.tgz",
+  "_where": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-11815-91699-167yla6.p7g1n0cnmi",
+  "bugs": {
+    "url": "https://github.com/t9md/atom-cursor-history/issues"
+  },
+  "configSchema": {
+    "max": {
+      "default": 100,
+      "minimum": 1,
+      "description": "number of history to keep",
+      "order": 0,
+      "type": "integer"
+    },
+    "rowDeltaToRemember": {
+      "default": 4,
+      "minimum": 0,
+      "description": "Save history when row delta was greater than this value",
+      "order": 1,
+      "type": "integer"
+    },
+    "columnDeltaToRemember": {
+      "default": 9999,
+      "minimum": 0,
+      "description": "Save history when cursor moved within same row and column delta was greater than this value",
+      "order": 2,
+      "type": "integer"
+    },
+    "excludeClosedBuffer": {
+      "default": false,
+      "description": "Don't open closed Buffer on history excursion",
+      "order": 3,
+      "type": "boolean"
+    },
+    "keepSingleEntryPerBuffer": {
+      "default": false,
+      "description": "Keep latest entry only per buffer",
+      "order": 4,
+      "type": "boolean"
+    },
+    "searchAllPanes": {
+      "default": true,
+      "description": "Search existing buffer from all panes before opening new editor",
+      "order": 5,
+      "type": "boolean"
+    },
+    "flashOnLand": {
+      "default": true,
+      "description": "flash cursor on land",
+      "order": 6,
+      "type": "boolean"
+    },
+    "ignoreCommands": {
+      "default": [
+        "command-palette:toggle"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "description": "list of commands to exclude from history tracking.",
+      "order": 7,
+      "type": "array"
+    },
+    "debug": {
+      "default": false,
+      "order": 8,
+      "type": "boolean"
+    }
+  },
+  "dependencies": {},
+  "description": "Cursor position history manager",
+  "devDependencies": {
+    "prettier": "^1.10.2",
+    "standard": "^10.0.3"
+  },
+  "engines": {
+    "atom": "^1.19.0"
+  },
+  "homepage": "https://github.com/t9md/atom-cursor-history#readme",
+  "keywords": [
+    "jumplist",
+    "history",
+    "navigation"
+  ],
+  "license": "MIT",
+  "main": "./lib/main",
+  "name": "cursor-history",
+  "optionalDependencies": {},
+  "readme": "# cursor-history [![Build Status](https://travis-ci.org/t9md/atom-cursor-history.svg)](https://travis-ci.org/t9md/atom-cursor-history)\n\nLike browser's Go and Back button, like `ctrl-i`, `ctrl-o` in Vim.\nYou can go/back to cursor position history.\n\n![gif](https://raw.githubusercontent.com/t9md/t9md/3d4a0bd38ac9571510d5ba52aa5361897b123218/img/atom-cursor-history.gif)\n\n# Keymap\n\nNo default keymap. You need to set by yourself.  \n\n* e.g.\n\n```coffeescript\n'atom-workspace':\n  'ctrl-i': 'cursor-history:next'\n  'ctrl-o': 'cursor-history:prev'\n  'ctrl-cmd-i': 'cursor-history:next-within-editor'\n  'ctrl-cmd-o': 'cursor-history:prev-within-editor'\n```\n\n# Commands\n\n- `cursor-history:next`: Go to next point in history.\n- `cursor-history:prev`: Go to previous point in history.\n- `cursor-history:next-within-editor`: Go to next point in history within current editor.\n- `cursor-history:prev-within-editor`: Go to previous point in history within current editor.\n- `cursor-history:clear`: Clear history.\n\n# Features\n\n- Go and Back to previous/next position of cursor history including closed buffer(can exclude closed buffer with config option).\n- Flash cursor line on land.\n- Vim like history concatenation (Never save same line per file. This allow you to jump specific line only once).\n\n# When cursor history saved?\n\n- When editor lost focus.\n- When cursor moved and row delta exceeds `rowDeltaToRemember`(default 4).\n- When cursor moved within same row and column delta exceeds `columnDeltaToRemember`(default 9999).\n\n# Customize flashing effects.\n\nWhen you enabled `flashOnLand`(default `false`), it flashes cursor line when move around history position.  \nYou can customize flashing effect in your `style.less` based on following example.  \n\n```less\n@keyframes cursor-history-flash {\n  from { background-color: red; }\n}\natom-text-editor.editor .line.cursor-history-flash-line {\n  animation-duration: 1s;\n}\n```\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t9md/atom-cursor-history.git"
+  },
+  "scripts": {
+    "lint": "standard lib/*.js spec/*.js",
+    "prettier": "prettier --write --no-semi --print-width=120 --no-bracket-spacing --trailing-comma=es5 'lib/**/*.js' 'spec/*.js'",
+    "test": "apm test",
+    "watch": "fswatch -0 spec lib | xargs -0 -n1 -I{} apm test"
+  },
+  "standard": {
+    "env": {
+      "atomtest": true,
+      "browser": true,
+      "jasmine": true,
+      "node": true
+    },
+    "globals": [
+      "atom"
+    ],
+    "ignore": [
+      "spec/fixtures/*"
+    ]
+  },
+  "version": "0.13.0"
+}

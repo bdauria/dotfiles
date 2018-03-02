@@ -1,0 +1,88 @@
+{
+  "rules": {
+    "array-type": [true, "array"],
+    "arrow-return-shorthand": [true, "multiline"],
+    "comment-format": [true, "check-space"],
+    "class-name": true,
+    "curly": true,
+    "function-name": [true, {
+      "method-regex": "^[a-z][\\w\\d]+$",
+      "private-method-regex": "^_[a-z][\\w\\d]+$",
+      "protected-method-regex": "^[a-z][\\w\\d]+$",
+      "static-method-regex": "^[a-zA-Z][\\w\\d]+$",
+      "function-regex": "^[a-z][\\w\\d]+$"
+    }],
+    "indent": [true, "spaces"],
+    "interface-name": [true, "always-prefix"],
+    "jsdoc-format": true,
+    "member-access": true,
+    "member-ordering": true,
+    "newline-before-return": true,
+    "new-parens": true,
+    "no-consecutive-blank-lines": true,
+    "no-debugger": true,
+    "no-duplicate-super": true,
+    "no-empty-interface": true,
+    "no-inferrable-types": [
+      true,
+      "ignore-params",
+      "ignore-properties"
+    ],
+    "no-magic-numbers": {
+      "severity": "warning"
+    },
+    "no-multi-spaces": true,
+    "no-require-imports": true,
+    "no-trailing-whitespace": {
+      "severity": "warning"
+    },
+    "no-unused-expression": [true, "allow-fast-null-checks"],
+    "no-unused-variable": true,
+    "no-var-keyword": true,
+    "no-var-requires": true,
+    "object-literal-key-quotes": [true, "as-needed"],
+    "prefer-const": true,
+    "prefer-type-cast": true,
+    "quotemark": [true,
+      "double",
+      "avoid-escape"
+    ],
+    "semicolon": true,
+    "sort-imports": true,
+    "space-before-function-paren": [
+      true,
+      {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "always",
+        "method": "never",
+        "constructor": "never"
+      }
+    ],
+    "trailing-comma": [
+      true,
+      {
+        "singleline": "never",
+        "multiline": "never"
+      }
+    ],
+    "triple-equals": [
+      true,
+      "allow-undefined-check"
+    ],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore"
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-separator",
+      "check-type"
+    ]
+  }
+}

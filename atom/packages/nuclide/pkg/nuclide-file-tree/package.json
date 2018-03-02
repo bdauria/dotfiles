@@ -1,0 +1,111 @@
+{
+  "name": "nuclide-file-tree",
+  "main": "./lib/main.js",
+  "version": "0.0.0",
+  "description": "Provides the new file tree panel for Nuclide",
+  "author": "Nuclide : Core UI",
+  "consumedServices": {
+    "nuclide-current-working-directory": {
+      "versions": {
+        "0.0.0": "consumeCwdApi"
+      }
+    },
+    "working-sets.provider": {
+      "versions": {
+        "0.0.0": "consumeWorkingSetsStore"
+      }
+    },
+    "nuclide-remote-projects": {
+      "versions": {
+        "0.0.0": "consumeRemoteProjectsService"
+      }
+    }
+  },
+  "providedServices": {
+    "nuclide-file-tree.context-menu": {
+      "versions": {
+        "0.1.0": "getContextMenuForFileTree"
+      }
+    },
+    "nuclide-file-tree.project-selection": {
+      "versions": {
+        "0.0.0": "getProjectSelectionManagerForFileTree"
+      }
+    },
+    "additional-log-files": {
+      "description": "File tree state files",
+      "versions": {
+        "0.0.0": "getFileTreeAdditionalLogFilesProvider"
+      }
+    }
+  },
+  "atomTestRunner": "../../lib/test-runner-entry.js",
+  "deserializers": {
+    "nuclide.FileTreeSidebarComponent": "deserializeFileTreeSidebarComponent"
+  },
+  "nuclide": {
+    "configMetadata": {
+      "pathComponents": [
+        "IDE",
+        "File Tree"
+      ]
+    },
+    "config": {
+      "revealFileOnSwitch": {
+        "title": "Reveal File on Switch",
+        "type": "boolean",
+        "default": false,
+        "description": "Automatically reveal the current file when you switch tabs"
+      },
+      "hideIgnoredNames": {
+        "title": "Hide Ignored Names",
+        "type": "boolean",
+        "default": true,
+        "description": "Hide paths that match the \"Ignored Names\" under \"Settings > Core Settings\""
+      },
+      "allowKeyboardPrefixNavigation": {
+        "title": "Enable prefix-based keyboard navigation",
+        "type": "boolean",
+        "default": true,
+        "description": "Allows using the keyboard to navigate to a sibling node matching a prefix string"
+      },
+      "showOpenFiles": {
+        "title": "Show open files",
+        "type": "boolean",
+        "default": true,
+        "description": "Display a list of currently opened files in the top section of the tree"
+      },
+      "showUncommittedChanges": {
+        "title": "Show uncommitted changes",
+        "type": "boolean",
+        "default": true,
+        "description": "Display a list of uncommitted changes in the top section of the tree"
+      },
+      "showUncommittedChangesKind": {
+        "title": "What kind of changes to show",
+        "type": "string",
+        "default": "Uncommitted changes",
+        "description": "Show changes from which part of your current stack",
+        "enum": [
+          "Uncommitted changes",
+          "Head changes",
+          "Stack changes"
+        ]
+      },
+      "autoExpandSingleChild": {
+        "title": "Auto expand single child",
+        "type": "boolean",
+        "default": true,
+        "description": "Automatically expand single child directory when parent is expanded"
+      },
+      "focusEditorOnFileSelection": {
+          "title": "Focus editor on file selection",
+          "type": "boolean",
+          "default": false,
+          "description": "Focuses the editor when a file is selected and previewed"
+      }
+    },
+    "packageType": "Atom",
+    "testRunner": "apm"
+  }
+}

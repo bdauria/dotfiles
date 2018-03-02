@@ -1,0 +1,85 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117719-52433-1ggtizv.6vmt68byb9/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117719-52433-1ggtizv.6vmt68byb9/package.tgz",
+        "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117719-52433-1ggtizv.6vmt68byb9/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-117719-52433-1wmh0cr.2u60jgiudi"
+    ]
+  ],
+  "_from": "../d-117719-52433-1ggtizv.6vmt68byb9/package.tgz",
+  "_id": "nova-atom-syntax@1.5.0",
+  "_inCache": true,
+  "_location": "/nova-atom-syntax",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117719-52433-1ggtizv.6vmt68byb9/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117719-52433-1ggtizv.6vmt68byb9/package.tgz",
+    "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117719-52433-1ggtizv.6vmt68byb9/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117719-52433-1ggtizv.6vmt68byb9/package.tgz",
+  "_shasum": "ccbe60f759b8a6564e7400525bda699abf00d8a0",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117719-52433-1ggtizv.6vmt68byb9/package.tgz",
+  "_where": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-117719-52433-1wmh0cr.2u60jgiudi",
+  "author": {
+    "name": "Trevor D. Miller",
+    "email": "trevordmiller@icloud.com",
+    "url": "http://www.trevordmiller.com"
+  },
+  "bugs": {
+    "url": "https://github.com/trevordmiller/nova-atom-syntax/issues"
+  },
+  "dependencies": {},
+  "description": "Nova color scheme syntax plugin for Atom",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://trevordmiller.github.io/nova",
+  "keywords": [
+    "syntax",
+    "theme",
+    "atom-theme",
+    "color-scheme",
+    "colors"
+  ],
+  "license": "MIT",
+  "name": "nova-atom-syntax",
+  "optionalDependencies": {},
+  "readme": "# nova-atom-syntax\n\nNova color scheme syntax plugin for Atom\n\n![Screenshot](https://raw.githubusercontent.com/trevordmiller/nova-atom-syntax/master/assets/screenshot.png \"Screenshot\")\n\n## Contributing\n\nSee [CONTRIBUTING.md](CONTRIBUTING.md)\n\n## More info\n\n**See the [documentation website](https://trevordmiller.com/projects/nova) for more information**\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trevordmiller/nova-atom-syntax.git"
+  },
+  "scripts": {
+    "release": "apm publish",
+    "start": "scripts/start"
+  },
+  "theme": "syntax",
+  "version": "1.5.0",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

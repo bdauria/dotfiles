@@ -1,0 +1,80 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117431-20899-1jcqdb5.i7xfl84cxr/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117431-20899-1jcqdb5.i7xfl84cxr/package.tgz",
+        "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117431-20899-1jcqdb5.i7xfl84cxr/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-117431-20899-1w5uzvn.5n96pc766r"
+    ]
+  ],
+  "_from": "../d-117431-20899-1jcqdb5.i7xfl84cxr/package.tgz",
+  "_id": "angular-2-typeScript-snippets@0.7.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/angular-2-typeScript-snippets",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117431-20899-1jcqdb5.i7xfl84cxr/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117431-20899-1jcqdb5.i7xfl84cxr/package.tgz",
+    "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117431-20899-1jcqdb5.i7xfl84cxr/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117431-20899-1jcqdb5.i7xfl84cxr/package.tgz",
+  "_shasum": "8eaf9b522aa3dd322270190c7344c26877be3d18",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117431-20899-1jcqdb5.i7xfl84cxr/package.tgz",
+  "_where": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-117431-20899-1w5uzvn.5n96pc766r",
+  "author": {
+    "name": "Gregor Woiwode",
+    "email": "gregor.woiwode@gmail.com",
+    "url": "https://github.com/gregonnet"
+  },
+  "bugs": {
+    "url": "https://github.com/GregOnNet/atom-angular-2-typeScript-snippets/issues"
+  },
+  "dependencies": {},
+  "description": "Angular 2 TypeSctipt Snippets for Atom.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/GregOnNet/atom-angular-2-typeScript-snippets#readme",
+  "keywords": [
+    "angular2",
+    "typescript",
+    "snippets",
+    "productivity"
+  ],
+  "license": "MIT",
+  "name": "angular-2-typeScript-snippets",
+  "optionalDependencies": {},
+  "readme": "# Angular 2 TypeScript Snippets for Atom\n\nThis extension for Atom adds snippets for Angular 2 for TypeScript and HTML.\n\n## Usage\n\nType part of a snippet, press `enter`, and the snippet unfolds.\n\n### TypeScript Snippets\n\n|snippet|explanation|\n|-------|-----------|\n|[ng2-bootstrap](#ng2-bootstrap)          |bootstrap a module|\n|[ng2-module](#ng2-module)                |create a module|\n|[ng2-component](#ng2-component)          |create a component|\n|[ng2-input](#ng2-input)                  |create an input property|\n|[ng2-output](#ng2-output)                |create an output event|\n|[ng2-directive](#ng2-directive)          |create a directive|\n|[ng2-pipe](#ng2-pipe)                    |create a pipe|\n|[ng2-routes](#ng2-routes)                |setup routes|\n|[ng2-route-path](#ng2-route-path)        |configure single|\n|[ng2-service](#ng2-service)              |create a  service|\n|[ng2-subscribe](#ng2-subscribe)          |subscribe to an observable|\n|[ng2-rx-map](#ng2-rx-map)                |import map-operator |\n\n### HTML Snippets\n\n|snippet                          |\n|---------------------------------|\n|[ng2-ngClass](#ng2-ngclass)      |\n|[ng2-ngFor](#ng2-ngfor)          |\n|[ng2-ngIf](#ng2-ngif)            |\n|[ng2-ngModel](#ng2-ngmodel)      |\n|[ng2-property](#ng2-property)    |\n|[ng2-event](#ng2-event)          |\n|[ng2-routerLink](#ng2-routerlink)|\n|[ng2-ngStyle](#ng2-ngstyle)      |\n|[ng2-ngSwitch](#ng2-ngswitch)    |\n\nAlternatively, press `Ctrl`+`Space` (Windows, Linux) or `Cmd`+`Space` (OSX) to activate snippets from within the editor.\n\n## Known Issues\n\nIt seems that you need to have a `tsconfig.json` to get the TypeScript snippets to work.\n\n## Snippets in Detail\n\nNo one wants to buy a pig in a poke.\nThe following section will show you what the provided snippets actually do for you.\n\n### ng2-bootstrap\n\n`ng2-bootstrap` allows you to start your root module to get your app up and running.\nIt also prepares `enableProdMode()` for you.\n\n```ts\nimport { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\nimport { enableProdMode } from '@angular/core';\nimport { <module-name> } from './<path-to-module>.module';\n\n//enableProdMode(); //Uncomment for production\nplatformBrowserDynamic().bootstrapModule(<module-name>);\n```\n\n### ng2-module\n\n`ng2-module` provides a skeleton for an Angular 2 module.\n\n```ts\nimport { NgModule } from '@angular/core';\n\n@NgModule({\n  imports: [<Modules>],\n  declarations: [<Components>, <Directives>],\n  providers: [<Services>]\n})\nexport class <ModuleName> { }\n```\n\n### ng2-component\n\n`ng2-component` provides a skeleton for an Angular 2 Component.\nIt saves you time typing the mandatory Decorator properties.\n\n```ts\nimport { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: '<selector>',\n  templateUrl: '<component-name>.component.html',\n})\nexport class <ComponentName>Component implements OnInit {\n  constructor() {  }\n\n  ngOnInit() {}\n}\n```\n\n### ng2-input\n\n`ng2-input` is a handy snippet to add an input property to a component class.\n\n```ts\n@Input() <peroperty>: <type>;\n```\n\n### ng2-output\n\n`ng2-output`generates a output event in a component class.\n\n```ts\n@Output() <event>: EventEmitter<type> = new EventEmitter();\n```\n\n### ng2-import\n\n`ng2-import` gives you a shorthand writing import-statements.\n\n```ts\nimport {<Module or Component>} from '<path to component>';\n```\n\n### ng2-directive\n\n`ng2-directive` provides a skeleton for an Angular 2 Attribute or Structural Directive.\n\n```ts\nimport { Directive, Input } from '@angular/core';\n\n@Directive({ selector: '[<selector>]' })\nexport class [DirectiveName]Directive { }\n```\n\n### ng2-pipe\n\n`ng2-pipe` provides a skeleton for an Angular 2 Pipe.\n\n```ts\nimport { Pipe, PipeTransform } from '@angular/core';\n\n@Pipe({\n  name: '<pipe-name>'\n})\nexport class <PipeName>Pipe implements PipeTransform {\n  transform(value: <value-type>, args: any[]) : <value-type> {\n    return ;\n  }\n}\n```\n\n### ng2-routes\n\n`ng2-routes` creates the `@Routes` decorator with a single route in it.\n\n```ts\nimport { RouterModule, Routes } from '@angular/router';\n\nconst app_routes: Routes = [\n  { path: '<url-segment>', component: <component-name> },\n  { path: '**', pathMatch: 'full', redirectTo: '<url-segment>' }\n];\n\nexport const app_routing = RouterModule.forRoot(app_routes);\n```\n\n### ng2-route-path\n\n`ng2-route-path` adds a single route to `@Routes`.\n**Use** this snippet inside the `@Routes` decorator.\n\n```ts\n{ path: '/<route>', component: <component-name> }\n```\n\n### ng2-service\n\n`ng2-service` provides a skeleton for an Angular 2 Service.\n\n```ts\nimport { Injectable } from '@angular/core';\n\n@Injectable()\nexport class <service-name>Service {\n  constructor() {  }\n}\n```\n\n### ng2-subscribe\n\n`ng2-subscribe` gives you a shorthand to call a service function, that returns a observable.\nThe `subscribe` method is also created for you. So you can assign the response quickly.\n\n```ts\nthis.<service-name>.<service-function>\n    .subscribe(<response> => this.<assign-target> = <response>});\n```\n\n### ng2-rx-map\n\n`ng2-rx-map` simply creates the import statement to reference the map operator of RxJs.\n\n```ts\nimport 'rxjs/add/operator/map';\n```\n\n### ng2-ngClass\n\nThis snippet inserts the `ngClass` directive.\n\n```html\n<div [ngClass]=\"cssClass: expression\"></div>\n```\n\n### ng2-ngFor\n\nThis snippet inserts the `ngFor` directive.\n\n```html\n<div *ngFor=\"let {1:$item} of list\"></div>\n```\n\n### ng2-ngIf\n\nThis snippet inserts the `ngIf` directive.\n\n```html\n<div *ngIf=\"expression\"></div>\n```\n\n### ng2-ngModel\n\nThis snippet inserts the `ngModel` directive.\n\n```html\n<div [(ngModel)]=\"binding\"></div>\n```\n\n### ng2-property\n\nThis snippet inserts the skeleton for a property binding directive.\n\n```html\n<div [property]=\"value\"></div>\n```\n\n### ng2-event\n\nThis snippet inserts the skeleton for a event binding directive.\n\n```html\n<div (event)=\"callback()\"></div>\n```\n\n### ng2-routerLink\n\nThis snippet inserts the `routerLink` directive.\n\n```html\n<a [routerLink]=\"routeName\"></a>\n```\n\n### ng2-ngStyle\n\nThis snippet inserts the `ngStyle` directive.\n\n```html\n<div [ngStyle]=\"'style': expression\"></div>\n```\n\n### ng2-ngSwitch\n\nThis snippet inserts the `ngSwitch` directive.\n\n```html\n<div [ngSwitch]=\"conditionExpression\">\n  <div *ngSwitchCase=\"expression\">output</div>\n  <div *ngSwitchDefault>output2</div>\n</div>\n```\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GregOnNet/atom-angular-2-typeScript-snippets.git"
+  },
+  "version": "0.7.0",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

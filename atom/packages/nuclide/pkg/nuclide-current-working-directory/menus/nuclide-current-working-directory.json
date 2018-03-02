@@ -1,0 +1,30 @@
+{
+  "menu": [
+    {
+      "label": "Nuclide",
+      "submenu": [
+        {
+          "label": "Current Working Root",
+          "submenu": [
+            {
+              "label": "Set from Active File",
+              "command": "nuclide-current-working-root:set-from-active-file"
+            },
+            {
+              "label": "Switch to Previous Working Directory",
+              "command": "nuclide-current-working-root:switch-to-previous"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "context-menu": {
+    "atom-pane atom-text-editor .lines, .tab-bar .tab [data-path]:not(.nuclide-file-tree-path)": [
+      {
+        "command": "nuclide-current-working-root:set-from-active-file",
+        "label": "Set Current Working Root Here"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "context-menu": {
+    "atom-panel-container .directory": [
+      {
+        "label": "New Angular2 Component",
+        "command": "angular2-component-generator:toggle"
+      }
+    ]
+  }
+}

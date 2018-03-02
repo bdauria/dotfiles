@@ -1,0 +1,82 @@
+{
+  "name": "nuclide-buck",
+  "main": "./lib/main.js",
+  "version": "0.0.0",
+  "description": "Buck integration for Nuclide.",
+  "author": "NEEDS OWNER",
+  "atomTestRunner": "../../lib/test-runner-entry.js",
+  "nuclide": {
+    "packageType": "Atom",
+    "testRunner": "apm",
+    "configMetadata": {
+      "pathComponents": [
+        "IDE",
+        "Buck"
+      ]
+    },
+    "config": {
+      "pathToBuck": {
+        "title": "Path to Buck Executable",
+        "type": "string",
+        "default": "buck",
+        "description": "Absolute path to the Buck executable on your system."
+      },
+      "compileErrorDiagnostics": {
+        "title": "Show compile errors from Buck in Diagnostics",
+        "type": "boolean",
+        "default": "true",
+        "description": "Attempt to detect and display compile errors in Diagnostics."
+      },
+      "buildDbErrorNotify": {
+        "title": "Show notification for errors and warnings when building compilation database.",
+        "type": "boolean",
+        "default": "true"
+      }
+    }
+  },
+  "consumedServices": {
+    "atom-ide-busy-signal": {
+      "versions": {
+        "0.1.0": "consumeBusySignal"
+      }
+    },
+    "nuclide.task-runner": {
+      "versions": {
+        "0.0.0": "consumeTaskRunnerServiceApi"
+      }
+    }
+  },
+  "providedServices": {
+    "hyperclick": {
+      "versions": {
+        "0.1.0": "getHyperclickProvider"
+      }
+    },
+    "DEPRECATED-diagnostics": {
+      "versions": {
+        "0.2.0": "provideObservableDiagnosticUpdates"
+      }
+    },
+    "nuclide.buck-builder": {
+      "versions": {
+        "0.0.0": "provideBuckBuilder"
+      }
+    },
+    "nuclide.buck-platforms": {
+      "versions": {
+        "0.0.0": "providePlatformService"
+      }
+    },
+    "nuclide.buck-task-runner": {
+      "versions": {
+        "0.0.0": "provideBuckTaskRunnerService"
+      }
+    },
+    "nuclide.clang.configuration": {
+      "versions": {
+        "0.0.0": "provideClangConfiguration"
+      }
+    }
+  },
+  "activationCommands": {}
+}

@@ -1,0 +1,10 @@
+'atom-workspace atom-text-editor:not([mini])[data-grammar^="source ts"]':
+  'alt-cmd-l': 'typescript:format-code'
+  'alt-ctrl-l': 'typescript:format-code'
+  'f2': 'typescript:rename-refactor'
+  'shift-f12': 'typescript:find-references'
+
+'atom-workspace':
+  'f6': 'typescript:build'
+  'f10': 'typescript:return-from-declaration'
+  'f12': 'typescript:go-to-declaration'

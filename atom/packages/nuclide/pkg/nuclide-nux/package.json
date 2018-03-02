@@ -1,0 +1,37 @@
+{
+  "name": "nuclide-nux",
+  "main": "./lib/main.js",
+  "version": "0.0.0",
+  "description": "A New User Experience (NUX) framework for Nuclide.",
+  "author": "NEEDS OWNER",
+  "atomTestRunner": "../../lib/test-runner-entry.js",
+  "nuclide": {
+    "packageType": "Atom",
+    "testRunner": "apm"
+  },
+  "providedServices": {
+    "nux-register": {
+      "versions": {
+        "0.0.0": "provideRegisterNuxService"
+      }
+    },
+    "nux-trigger": {
+      "versions": {
+        "0.0.0": "provideTriggerNuxService"
+      }
+    }
+  },
+  "consumedServices": {
+    "nux-sync-completed": {
+      "versions": {
+        "0.0.0": "consumeSyncCompletedNuxService"
+      }
+    }
+  },
+  "activationCommands": {
+    "atom-workspace": [
+      "DEPRECATED: Enable unused parts of Nuclide"
+    ]
+  },
+  "private": false
+}

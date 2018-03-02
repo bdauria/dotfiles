@@ -1,0 +1,31 @@
+{
+  "name": "nuclide-outline-view-extras",
+  "main": "./lib/main.js",
+  "version": "0.0.0",
+  "description": "nuclide-home and nuclide-nux providers for Outline.",
+  "author": "Nuclide : Core UI",
+  "atomTestRunner": "../../lib/test-runner-entry.js",
+  "nuclide": {
+    "packageType": "Atom",
+    "testRunner": "apm"
+  },
+  "consumedServices": {
+    "nux-register": {
+      "versions": {
+        "0.0.0": "consumeRegisterNuxService"
+      }
+    },
+    "tool-bar": {
+      "versions": {
+        "^1.0.0": "consumeToolBar"
+      }
+    }
+  },
+  "providedServices": {
+    "nuclide-home.homeFragments": {
+      "versions": {
+        "0.0.0": "getHomeFragments"
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11718-26990-10z9s5m/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11718-26990-10z9s5m/package.tgz",
+        "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11718-26990-10z9s5m/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-11718-26990-1e67ogp"
+    ]
+  ],
+  "_from": "../d-11718-26990-10z9s5m/package.tgz",
+  "_id": "angular2-component-generator@0.0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/angular2-component-generator",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11718-26990-10z9s5m/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11718-26990-10z9s5m/package.tgz",
+    "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11718-26990-10z9s5m/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-11718-26990-10z9s5m/package.tgz",
+  "_shasum": "7bf45ddf7489532d32b35130dc3d41c991e37cd5",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11718-26990-10z9s5m/package.tgz",
+  "_where": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-11718-26990-1e67ogp",
+  "activationCommands": {
+    "atom-workspace": "angular2-component-generator:toggle"
+  },
+  "author": {
+    "name": "Dmytro Baikov",
+    "email": "dmitriybaikov@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/dbaikov/atom-angular2-component-generator/issues"
+  },
+  "dependencies": {
+    "atom-space-pen-views": "^2.2.0",
+    "change-case": "^3.0.0",
+    "fs": "0.0.1-security",
+    "fs-extra": "^0.30.0",
+    "rxjs": "^5.0.0-rc.1"
+  },
+  "description": "Generates angular2 component files (html, css, typescript -> template, style-sheet, component.ts + module.ts)",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/dbaikov/atom-angular2-component-generator",
+  "keywords": [
+    "atom-angular2",
+    "angular2",
+    "angular2 component",
+    "angular2 generate component",
+    "typescript"
+  ],
+  "license": "MIT",
+  "main": "./lib/angular2-component-generator",
+  "name": "angular2-component-generator",
+  "optionalDependencies": {},
+  "readme": "# Angular2 Component Generation Extension for Atom\n\n## Description\nExtension automatically creates folder for angular2 component containing :\n- `component.ts`\n- `module.ts`\n- `component.html`\n- `component.css`\n\n## Usage\n\n- Right click on on the file or folder in the explorer\n- Select \"New Angular2 Component\"\n- Enter component name in the pop up in camelCase\n\n![Use Extension](https://media.giphy.com/media/l3vR4BrhHp3DzihQA/source.gif)\n\n## Configuration\n- create true / false - (controls weather to generate this file or not)\n- extension - extension of generated file (e.g. you might want to change \"scss\" to just plain \"css\")\n- template - path to the custom template for the generated file\n    - {selector}    -> replaced with `lower case, dash separated string`\n    - {templateUrl} -> replaced with `${selector}.component.html`\n    - {styleUrls}   -> replaced with `${selector}.component.css`\n    - {className}   -> replaced with `componentName in PascalCase`\n\nUse the \"template\" key to override default templates for the extension\n\n```javascript\nng2ComponentGenerator:\n  files:\n    component:\n      create: true\n      extension: \"ts\"\n      template: \"${workspaceRoot}/my.template\"\n    css:\n      create: true\n      extension: \"scss\"\n    html:\n      create: true\n      extension: \"html\"\n    module:\n      create: true\n      extension: \"ts\"\n```\n![Config Extension](https://media.giphy.com/media/3oz8xyuAbBHOWJP2Ba/source.gif)\n\n## Bugs\n\nPlease report [here](https://github.com/dbaikov/vscode-angular2-component-generator/issues)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbaikov/atom-angular2-component-generator.git"
+  },
+  "version": "0.0.1"
+}

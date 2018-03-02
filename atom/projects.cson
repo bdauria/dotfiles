@@ -1,0 +1,18 @@
+[
+  {
+    title: "Epub Reader"
+    group: "Bubo"
+    paths: [
+      "~/workspace/epub-reader"
+    ]
+    devMode: true
+  }
+  {
+    title: "Sitebuilder"
+    group: "Glogood"
+    paths: [
+      "~/workspace/sitebuilder"
+    ]
+    devMode: true
+  }
+]

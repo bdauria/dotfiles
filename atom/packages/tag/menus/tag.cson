@@ -1,0 +1,14 @@
+'context-menu':
+  'atom-workspace': [ {label: 'Close Tag', command: 'tag:close-tag'} ]
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Tag'
+      'submenu': [
+        { 'label': 'Close Tag', 'command': 'tag:close-tag' }
+      ]
+    ]
+  }
+]

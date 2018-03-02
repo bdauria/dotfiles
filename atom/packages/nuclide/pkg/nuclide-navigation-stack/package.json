@@ -1,0 +1,20 @@
+{
+  "name": "nuclide-navigation-stack",
+  "main": "./lib/main.js",
+  "version": "0.0.0",
+  "description": "Navigation stack for code browsing history.",
+  "author": "NEEDS OWNER",
+  "atomTestRunner": "../../lib/test-runner-entry.js",
+  "nuclide": {
+    "packageType": "Atom",
+    "testRunner": "apm"
+  },
+  "providedServices": {
+    "navigation-stack": {
+      "versions": {
+        "0.0.0": "getNavigationStackProvider"
+      }
+    }
+  },
+  "activationCommands": {}
+}

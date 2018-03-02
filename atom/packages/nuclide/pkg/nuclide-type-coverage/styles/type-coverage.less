@@ -1,0 +1,25 @@
+@import 'ui-variables';
+
+.nuclide-type-coverage-status-bar {
+  display: inline-flex;
+  // Make sure the button doesn't "grow" when the text transitions to bolded
+  // or when moving from 2 to 3 digit percentages
+  min-width: 64px;
+}
+
+.nuclide-type-coverage-status-bar-percentage {
+  margin-left: auto;
+}
+
+.nuclide-type-coverage-status-bar-pending {
+  opacity: 0.5;
+}
+
+.nuclide-type-coverage-status-bar-ready {
+  opacity: 1.0;
+  transition: opacity 0.1s ease-out;
+}
+
+.nuclide-type-coverage-status-bar-active {
+  font-weight: bold;
+}

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "jsx": "react",
+    "jsxFactory": "etch.dom",
+    "lib": ["es7", "dom"],
+    "module": "commonjs",
+    "noLib": false,
+    "outDir": "../dist",
+    "preserveConstEnums": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2017",
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true
+  },
+  "compileOnSave": true
+}

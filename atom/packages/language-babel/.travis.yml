@@ -1,0 +1,33 @@
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
+
+git:
+  depth: 10
+
+sudo: false
+
+matrix:
+  include:
+    - os: osx
+      env: ATOM_CHANNEL=stable
+ #   - os: linux
+ #     dist: trusty
+ #     env: ATOM_CHANNEL=stable
+    - os: osx
+      env: ATOM_CHANNEL=beta
+ #   - os: linux
+ #     dist: trusty
+ #     env: ATOM_CHANNEL=beta
+
+branches:
+  only:
+    - master
+
+addons:
+  apt:
+    packages:
+    - libstdc++6

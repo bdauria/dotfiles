@@ -1,0 +1,107 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'Atom Keyboard Macros'
+      'submenu': [
+        {
+          'label': 'Start Record'
+          'command': 'atom-keyboard-macros:start_kbd_macro'
+        }
+        {
+          'label': 'Stop Record'
+          'command': 'atom-keyboard-macros:end_kbd_macro'
+        }
+        {
+          'label': 'Execute Macro'
+          'command': 'atom-keyboard-macros:call_last_kbd_macro'
+        }
+        {
+          'label': 'Repeat Macro'
+          'command': 'atom-keyboard-macros:repeat_last_kbd_macro'
+        }
+        {
+          'label': 'Repeat Macro to Bottom'
+          'command': 'atom-keyboard-macros:execute_macro_to_bottom'
+        }
+        {
+          'label': 'Repeat Macro from Top to Bottom'
+          'command': 'atom-keyboard-macros:execute_macro_from_top_to_bottom'
+        }
+        {
+          'label': 'Toggle Window'
+          'command': 'atom-keyboard-macros:toggle'
+        }
+        {
+          'label': 'Quick Load'
+          'command': 'atom-keyboard-macros:quick_load'
+        }
+        {
+          'label': 'Quick Save'
+          'command': 'atom-keyboard-macros:quick_save'
+        }
+        {
+          'label': 'Load...'
+          'command': 'atom-keyboard-macros:load'
+        }
+        {
+          'label': 'Save as...'
+          'command': 'atom-keyboard-macros:save'
+        }
+      ]
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'atom-keyboard-macros'
+      'submenu': [
+        {
+          'label': 'Start Record'
+          'command': 'atom-keyboard-macros:start_kbd_macro'
+        }
+        {
+          'label': 'Stop Record'
+          'command': 'atom-keyboard-macros:end_kbd_macro'
+        }
+        {
+          'label': 'Execute Macro'
+          'command': 'atom-keyboard-macros:call_last_kbd_macro'
+        }
+        {
+          'label': 'Repeat Macro'
+          'command': 'atom-keyboard-macros:repeat_last_kbd_macro'
+        }
+        {
+          'label': 'Repeat Macro to Bottom'
+          'command': 'atom-keyboard-macros:execute_macro_to_bottom'
+        }
+        {
+          'label': 'Repeat Macro from Top to Bottom'
+          'command': 'atom-keyboard-macros:execute_macro_from_top_to_bottom'
+        }
+        {
+          'label': 'Toggle Window'
+          'command': 'atom-keyboard-macros:toggle'
+        }
+        {
+          'label': 'Quick Load'
+          'command': 'atom-keyboard-macros:quick_load'
+        }
+        {
+          'label': 'Quick Save'
+          'command': 'atom-keyboard-macros:quick_save'
+        }
+        {
+          'label': 'Load...'
+          'command': 'atom-keyboard-macros:load'
+        }
+        {
+          'label': 'Save as...'
+          'command': 'atom-keyboard-macros:save'
+        }
+      ]
+    ]
+  }
+]

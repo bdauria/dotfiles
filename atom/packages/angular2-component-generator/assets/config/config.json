@@ -1,0 +1,20 @@
+{
+    "files": {
+        "component": {
+            "create": true,
+            "extension": "ts"
+        },
+        "css": {
+            "create": true,
+            "extension": "scss"
+        },
+        "html": {
+            "create": true,
+            "extension": "html"
+        },
+        "module": {
+            "create": true,
+            "extension": "ts"
+        }
+    }
+}

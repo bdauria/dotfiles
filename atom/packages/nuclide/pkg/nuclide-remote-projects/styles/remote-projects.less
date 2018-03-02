@@ -1,0 +1,42 @@
+@import 'ui-variables';
+
+.nuclide-remote-projects-status-icon {
+  cursor: pointer;
+  &.cloud-upload {
+    color: @text-color-success;
+  }
+  &.icon-alert {
+    color: @text-color-error;
+  }
+}
+
+.nuclide-remote-projects-tooltip-warning {
+  cursor: help;
+  color: @text-color-error;
+}
+
+atom-panel.modal.nuclide-remote-projects-panel-connect {
+  width: 650px;
+  max-width: 100%;
+  min-width: 550px;
+}
+
+.nuclide-remote-text-editor-placeholder {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.nuclide-remote-text-editor-placeholder-header {
+  padding: 1em;
+}
+
+.nuclide-remote-text-editor-placeholder atom-text-editor {
+  flex: 1;
+}
+
+.nuclide-remote-text-editor-placeholder {
+  background-color: @syntax-background-color;
+}

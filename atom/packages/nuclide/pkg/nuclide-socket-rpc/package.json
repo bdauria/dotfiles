@@ -1,0 +1,14 @@
+{
+  "name": "nuclide-socket-rpc",
+  "main": "./lib/SocketService.js",
+  "version": "0.0.0",
+  "description": "Provides API to listen on a socket on a remote host",
+  "author": "NEEDS OWNER",
+  "nuclide": {
+    "packageType": "Node",
+    "testRunner": "npm"
+  },
+  "scripts": {
+    "test": "node ../nuclide-jasmine/bin/jasmine-node-transpiled spec"
+  }
+}

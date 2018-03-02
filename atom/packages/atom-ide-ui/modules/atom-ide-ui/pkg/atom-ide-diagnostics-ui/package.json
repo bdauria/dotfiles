@@ -1,0 +1,69 @@
+{
+  "name": "atom-ide-diagnostics-ui",
+  "displayName": "Diagnostics",
+  "repository": "https://github.com/facebook/nuclide",
+  "main": "./lib/main.js",
+  "version": "0.0.0",
+  "description": "Displays linter results, useful information, and problems with your code",
+  "author": "Nuclide : Diagnostics",
+  "atomTestRunner": "../../../scripts/atom-test-runner.js",
+  "deserializers": {
+    "nuclide.DiagnosticsPanelModel": "deserializeDiagnosticsViewModel",
+    "atom-ide-ui.DiagnosticsViewModel": "deserializeDiagnosticsViewModel"
+  },
+  "nuclide": {
+    "configMetadata": {
+      "pathComponents": [
+        "IDE",
+        "Diagnostics"
+      ]
+    }
+  },
+  "atomConfig": {
+    "statusBarPosition": {
+      "title": "Status Bar position",
+      "type": "string",
+      "default": "left",
+      "description": "",
+      "enum": [
+        "left",
+        "right"
+      ]
+    },
+    "showDiagnosticTraces": {
+      "title": "Show full diagnostic traces",
+      "type": "boolean",
+      "default": false,
+      "description": "Shows full trace information in diagnostics."
+    },
+    "showDirectoryColumn": {
+      "title": "Show the Path column in the diagnostics table",
+      "description": "The file's directory can give more context but is often unnecessary.",
+      "type": "boolean",
+      "default": false
+    },
+    "autoVisibility": {
+      "title": "Automatically show and hide diagnostics panel",
+      "description": "When new warnings appear, show the panel. When all warnings clear, hide it.",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "consumedServices": {
+    "datatip": {
+      "versions": {
+        "0.1.0": "consumeDatatipService"
+      }
+    },
+    "diagnostics-store": {
+      "versions": {
+        "0.3.0": "consumeDiagnosticUpdates"
+      }
+    },
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@import "./colors";
+
+atom-text-editor {
+  color: @nova_normal_white;
+  background-color: @nova_normal_black;
+
+  .gutter {
+    color: @nova_decoration_light;
+    background-color: @nova_normal_black;
+
+    .line-number {
+      opacity: 1;
+      &.cursor-line {
+        color: @nova_purpose_user_current_state;
+        background-color: @nova_normal_black;
+      }
+    }
+  }
+
+  .invisible-character {
+    color: @nova_purpose_trivial;
+  }
+
+  .indent-guide {
+    color: @nova_decoration_medium;
+  }
+
+  .wrap-guide {
+    background-color: @nova_decoration_medium;
+  }
+
+  .lines .line.cursor-line {
+    background-color: @nova_decoration_medium;
+  }
+
+  .selection .region {
+    background-color: @nova_purpose_user_current_state;
+    opacity: 0.5;
+  }
+
+  .bracket-matcher .region {
+    border: none;
+    outline: 1px dotted @nova_purpose_user_current_state;
+  }
+
+  .spell-check-misspelling .region {
+    border: none;
+    outline: 1px dotted @nova_purpose_user_action_needed;
+  }
+
+  .fold-marker:after,
+  .gutter .line-number.folded {
+    color: @nova_purpose_user_current_state;
+  }
+
+  .bracket-matcher .region {
+    border-color: @nova_purpose_user_current_state;
+  }
+
+  .scrollbars-visible-always {
+    /deep/ ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    /deep/ ::-webkit-scrollbar-track,
+    /deep/ ::-webkit-scrollbar-corner {
+      background: @nova_decoration_light;
+    }
+
+    /deep/ ::-webkit-scrollbar-thumb,
+    /deep/ ::-webkit-scrollbar-thumb:hover {
+      background: @nova_purpose_user_current_state;
+      border-radius: 5px;
+      box-shadow: 0;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "ui-variables";
+
+@flash-background: fadeout(darken(@syntax-selection-flash-color, 10%), 20%);
+
+@keyframes cursor-history-flash {
+  from { background-color: @flash-background; }
+  to { background-color: transparent; }
+}
+
+atom-text-editor.editor .line.cursor-history-flash-line {
+  animation-name: cursor-history-flash;
+  animation-iteration-count: 1;
+  animation-duration: 0.8s;
+}

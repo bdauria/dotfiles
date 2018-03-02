@@ -1,0 +1,28 @@
+@import 'ui-variables';
+
+.nuclide-health-pane-item {
+  overflow: auto;
+}
+
+/* By default, .settings-view uses flex, which messes up table widths in the health pane. */
+.nuclide-health-pane-item-section {
+  margin-bottom: 3em;
+  .settings-view {
+    display: block;
+    .table {
+      margin-bottom: 3em;
+      table-layout: fixed;
+      td {
+        overflow-x: scroll;
+      }
+    }
+  }
+}
+
+.nuclide-health-handle-new {
+  color: @text-color-error;
+}
+
+.nuclide-health-handle-updated {
+  color: @text-color-warning;
+}

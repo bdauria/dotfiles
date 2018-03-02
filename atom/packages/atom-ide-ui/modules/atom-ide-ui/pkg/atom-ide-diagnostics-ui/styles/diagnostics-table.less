@@ -1,0 +1,103 @@
+@import "ui-variables";
+
+@diagnostics-table-classification-icon-size: 14px;
+
+.diagnostics-ui-table-container {
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+
+  & > div:first-child {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+  }
+
+  .nuclide-ui-table {
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+
+    td:last-child,
+    th:last-child {
+      border-right-width: 0;
+    }
+  }
+
+  .nuclide-ui-table-body-cell {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.nuclide-ui-table-cell-text-align-right {
+  text-align: right;
+}
+
+.diagnostics-ui-table-container-empty .nuclide-ui-table {
+  border-bottom-width: 0;
+}
+
+.diagnostics-ui-table-message {
+  text-align: center;
+
+  &.highlight-warning,
+  &.highlight-error {
+    border-radius: 0;
+    padding: (@component-padding / 2) 0 @component-padding 0;
+  }
+}
+
+.diagnostics-ui-empty-component {
+  font-style: italic;
+  padding: 1em;
+  text-align: center;
+}
+
+.nuclide-diagnostics-ui-dir-cell-contents {
+  direction: rtl;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0.75;
+  white-space: nowrap;
+}
+
+.nuclide-diagnostics-ui-cell-dir.nuclide-ui-table-body-cell {
+  padding-right: 0;
+  border-right: 0;
+}
+
+.nuclide-diagnostics-ui-cell-filename.nuclide-ui-table-body-cell {
+  font-weight: 600;
+}
+
+.nuclide-diagnostics-ui-line-number {
+  opacity: 0.5;
+  font-weight: normal;
+}
+
+.nuclide-diagnostics-ui-cell-classification {
+  .nuclide-ui-table-row & {
+    text-align: center;
+
+    .icon::before {
+      width: @diagnostics-table-classification-icon-size;
+      height: @diagnostics-table-classification-icon-size;
+      font-size: @diagnostics-table-classification-icon-size;
+      margin-right: 0;
+    }
+  }
+
+  .nuclide-ui-table:not(:focus) .nuclide-ui-table-row &,
+  .nuclide-ui-table-row:not(.nuclide-ui-table-row-selected) & {
+    .icon { color: @text-color-info; }
+    .icon-nuclicon-error { color: @text-color-error; }
+    .icon-nuclicon-warning { color: @text-color-warning; }
+  }
+}
+
+.nuclide-diagnostics-ui-settings-modal {
+  flex-direction: column;
+  padding: @component-padding;
+}

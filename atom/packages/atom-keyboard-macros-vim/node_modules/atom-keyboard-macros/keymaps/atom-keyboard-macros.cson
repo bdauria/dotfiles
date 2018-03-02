@@ -1,0 +1,16 @@
+# Keybindings require three things to be fully defined: A selector that is
+# matched against the focused element, the keystroke and the command to
+# execute.
+#
+# Below is a basic keybinding which registers on all platforms by applying to
+# the root workspace element.
+
+# For more detailed documentation see
+# https://atom.io/docs/latest/behind-atom-keymaps-in-depth
+'atom-workspace':
+  'ctrl-x (': 'atom-keyboard-macros:start_kbd_macro'
+  'ctrl-x )': 'atom-keyboard-macros:end_kbd_macro'
+  'ctrl-x e': 'atom-keyboard-macros:call_last_kbd_macro'
+  'ctrl-x ctrl-e': 'atom-keyboard-macros:repeat_last_kbd_macro'
+  'ctrl-x b': 'atom-keyboard-macros:execute_macro_to_bottom'
+  'ctrl-x ctrl-b': 'atom-keyboard-macros:execute_macro_from_top_to_bottom'

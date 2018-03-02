@@ -1,0 +1,50 @@
+### Project specific config ###
+language: node_js
+
+matrix:
+  include:
+    - os: linux
+      node_js: "6"
+      env: ATOM_CHANNEL=stable
+
+    - os: linux
+      node_js: "node"
+      env: ATOM_CHANNEL=beta
+
+install:
+  - npm install -g flow-bin
+
+# The linting done in the Atom script doesn't handle flow
+after_script:
+  - npm run lint
+
+### Generic setup follows ###
+script:
+  - curl -s -O https://raw.githubusercontent.com/atom/ci/master/build-package.sh
+  - chmod u+x build-package.sh
+  - ./build-package.sh
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+branches:
+  only:
+    - master
+    - /^greenkeeper/.*$/
+
+git:
+  depth: 10
+
+sudo: false
+
+dist: trusty
+
+addons:
+  apt:
+    packages:
+    - build-essential
+    - fakeroot
+    - git
+    - libsecret-1-dev

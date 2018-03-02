@@ -1,0 +1,66 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117410-66757-mbnew0.avxs3v7vi/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117410-66757-mbnew0.avxs3v7vi/package.tgz",
+        "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117410-66757-mbnew0.avxs3v7vi/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-117410-66757-1f2nvb.pp1gyi7ldi"
+    ]
+  ],
+  "_from": "../d-117410-66757-mbnew0.avxs3v7vi/package.tgz",
+  "_id": "atom-material-syntax-dark@1.0.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/atom-material-syntax-dark",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117410-66757-mbnew0.avxs3v7vi/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117410-66757-mbnew0.avxs3v7vi/package.tgz",
+    "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117410-66757-mbnew0.avxs3v7vi/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117410-66757-mbnew0.avxs3v7vi/package.tgz",
+  "_shasum": "48c52cf9b740197ab38913287974842757f59e1b",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117410-66757-mbnew0.avxs3v7vi/package.tgz",
+  "_where": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-117410-66757-1f2nvb.pp1gyi7ldi",
+  "bugs": {
+    "url": "https://github.com/silvestreh/atom-material-syntax-dark/issues"
+  },
+  "dependencies": {},
+  "description": "A darker syntax theme for Atom that uses Google's Material Design color palette",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.13.0 <2.0.0"
+  },
+  "homepage": "https://github.com/silvestreh/atom-material-syntax-dark#readme",
+  "keywords": [
+    "syntax",
+    "theme",
+    "material",
+    "material design"
+  ],
+  "license": "MIT",
+  "name": "atom-material-syntax-dark",
+  "optionalDependencies": {},
+  "readme": "![](http://i.imgur.com/f58FC9u.png)\n---\n\nA darker variant of [Atom Material Syntax](https://github.com/silvestreh/atom-material-ui) for [Atom Material UI](https://github.com/silvestreh/atom-material-ui). Inspired by Mattia Astorino's [SublimeText theme](https://github.com/equinusocio/material-theme).\n\n![](http://i.imgur.com/2mxpDcl.png)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvestreh/atom-material-syntax-dark.git"
+  },
+  "theme": "syntax",
+  "version": "1.0.0"
+}

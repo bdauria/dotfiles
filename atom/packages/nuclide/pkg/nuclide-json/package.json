@@ -1,0 +1,32 @@
+{
+  "name": "nuclide-json",
+  "main": "./lib/main.js",
+  "version": "0.0.0",
+  "description": "Language services for JSON",
+  "author": "NEEDS OWNER",
+  "atomTestRunner": "../../lib/test-runner-entry.js",
+  "nuclide": {
+    "packageType": "Atom",
+    "testRunner": "apm"
+  },
+  "activationHooks": [
+    "language-json:grammar-used"
+  ],
+  "providedServices": {
+    "outline-view": {
+      "versions": {
+        "0.1.0": "provideOutlines"
+      }
+    },
+    "hyperclick": {
+      "versions": {
+        "0.1.0": "getHyperclickProvider"
+      }
+    },
+    "code-format.file": {
+      "versions": {
+        "0.1.0": "provideCodeFormat"
+      }
+    }
+  }
+}

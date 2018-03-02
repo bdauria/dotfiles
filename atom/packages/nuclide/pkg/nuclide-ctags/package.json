@@ -1,0 +1,38 @@
+{
+  "name": "nuclide-ctags",
+  "main": "./lib/main.js",
+  "version": "0.0.0",
+  "description": "Exposes nuclide-ctags-rpc functionality to Atom.",
+  "author": "NEEDS OWNER",
+  "atomTestRunner": "../../lib/test-runner-entry.js",
+  "nuclide": {
+    "configMetadata": {
+      "pathComponents": [
+        "Language",
+        "Remote ctags"
+      ]
+    },
+    "config": {
+      "disableWithHack": {
+        "title": "Filter out PHP symbols when Hack is available",
+        "type": "boolean",
+        "default": "true",
+        "description": "Avoid overlap with symbol results from Hack."
+      }
+    },
+    "packageType": "Atom",
+    "testRunner": "apm"
+  },
+  "providedServices": {
+    "hyperclick": {
+      "versions": {
+        "0.1.0": "getHyperclickProvider"
+      }
+    },
+    "nuclide-quick-open-register-provider": {
+      "versions": {
+        "0.0.0": "getQuickOpenProvider"
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+'.source.ts':
+  'import map operator':
+    'prefix': 'ng2-rx-map'
+    'description': 'Imports map operator from RxJs'
+    'descriptionMoreURL': 'https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/operators/select.md'
+    'body': """
+    import 'rxjs/add/operator/map';
+    """

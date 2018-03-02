@@ -1,0 +1,15 @@
+// Make sure that the :after pseudoelement doesn't get the click instead of the
+// element with the [data-path] attribute.
+// TODO: Get this added to the theme.
+.theme-one-light-ui,
+.theme-one-dark-ui {
+  .tab-bar .tab:after {
+    pointer-events: none;
+  }
+}
+
+atom-notifications, .tooltip.tooltip {
+  // modal background z-index is 9999. atom-notifications and tooltip's is ~1000
+  // by default, but we don't want modal background to hide them
+  z-index: 10000;
+}

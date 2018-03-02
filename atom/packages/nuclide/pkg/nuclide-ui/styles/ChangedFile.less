@@ -1,0 +1,68 @@
+@import "ui-variables";
+
+.nuclide-changed-file {
+  display: flex;
+
+  .nuclide-changed-file-name {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+      color: @text-color-highlight;
+      .nuclide-changed-file-name-icon:before {
+        color: @text-color-highlight;
+      }
+    }
+
+    .icon-file-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &.text-error .nuclide-changed-file-name:hover .icon::before,
+  &.text-success .nuclide-changed-file-name:hover .icon::before,
+  &.text-warning .nuclide-changed-file-name:hover .icon::before {
+    color: @text-color-highlight;
+  }
+
+  /* Override the color of file-icons according to their VCS state. */
+  &.text-success .icon::before {
+    color: @text-color-success;
+  }
+
+  &.text-warning .icon::before {
+    color: @text-color-warning;
+  }
+
+  &.text-error .icon::before {
+    color: @text-color-error;
+  }
+}
+
+.nuclide-changed-file-checkbox {
+  margin-right: @component-padding/2;
+}
+
+.nuclide-changed-file-checkbox .nuclide-ui-checkbox {
+  margin-bottom: 2px;
+}
+
+.nuclide-changed-file-actions {
+  cursor: pointer;
+  display: none;
+  margin-left: auto;
+  padding-left: @component-padding;
+  .nuclide-changed-file:hover & {
+    display: inline-block;
+  }
+}
+
+.nuclide-changed-file-action {
+  display: inline-block;
+  &:hover .icon::before {
+    color: @text-color-highlight;
+  }
+}

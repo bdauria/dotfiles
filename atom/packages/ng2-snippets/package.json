@@ -1,0 +1,75 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117622-84149-1w23lvg.tjkan3766r/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117622-84149-1w23lvg.tjkan3766r/package.tgz",
+        "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117622-84149-1w23lvg.tjkan3766r/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-117622-84149-mcgwa8.i5n11kmx6r"
+    ]
+  ],
+  "_from": "../d-117622-84149-1w23lvg.tjkan3766r/package.tgz",
+  "_id": "ng2-snippets@0.2.2",
+  "_inCache": true,
+  "_location": "/ng2-snippets",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117622-84149-1w23lvg.tjkan3766r/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117622-84149-1w23lvg.tjkan3766r/package.tgz",
+    "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117622-84149-1w23lvg.tjkan3766r/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117622-84149-1w23lvg.tjkan3766r/package.tgz",
+  "_shasum": "c83b92cf83322cf0cb990d8aa211cc1056a42ec6",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-117622-84149-1w23lvg.tjkan3766r/package.tgz",
+  "_where": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-117622-84149-mcgwa8.i5n11kmx6r",
+  "bugs": {
+    "url": "https://github.com/mmcbride1007/ng2-snippets/issues"
+  },
+  "dependencies": {},
+  "description": "Angular2 snippets for Atom based on John Papa's VS Code snippets",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/mmcbride1007/ng2-snippets#readme",
+  "keywords": [
+    "angular2",
+    "ng2",
+    "snippets",
+    "typescript",
+    "angular"
+  ],
+  "license": "MIT",
+  "name": "ng2-snippets",
+  "optionalDependencies": {},
+  "readme": "# ng2-snippets package\n\nAdds snippets for Angular 2 for TypeScript and HTML. Snippets taken from John Papa's [VS Code Angular2 snippets](https://github.com/johnpapa/vscode-angular2-snippets).\n\n## Usage\nType part of a snippet, press `enter` or `tab`, and the snippet unfolds.\n\n### TypeScript Snippets\n```typescript\nng2-component-root  // Angular 2 root App component\nng2-bootstrap     // Angular 2 bootstraping, for main.ts\nng2-component     // Angular 2 component\nng2-pipe          // Angular 2 pipe\nng2-route-config  // Angular 2 @RouteConfig\nng2-route-path    // Angular 2 routing path\nng2-service       // Angular 2 service\nng2-subscribe     // Angular 2 observable subscription\n```\n\n### HTML Snippets\n```html\nng2-ngClass\nng2-ngFor\nng2-ngIf\nng2-ngModel\nng2-routerLink\nng2-ngStyle\nng2-ngSwitch\n```\n\n## Installation\n\n```\napm install ng2-snippets\n```\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmcbride1007/ng2-snippets.git"
+  },
+  "version": "0.2.2",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

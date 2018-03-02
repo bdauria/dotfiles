@@ -1,0 +1,121 @@
+{
+  "name": "nuclide-clang",
+  "main": "./lib/main.js",
+  "version": "0.0.0",
+  "description": "Exposes features from nuclide-clang in Atom",
+  "author": "NEEDS OWNER",
+  "atomTestRunner": "../../lib/test-runner-entry.js",
+  "nuclide": {
+    "packageType": "Atom",
+    "testRunner": "apm",
+    "configMetadata": {
+      "pathComponents": [
+        "Language",
+        "Clang"
+      ]
+    },
+    "config": {
+      "libclangPath": {
+        "title": "libclang Library Path",
+        "type": "string",
+        "default": "",
+        "description": "Path to libclang.{so, dylib, dll} on your system. (Local projects only)"
+      },
+      "enableDefaultFlags": {
+        "title": "Enable Default Compilation Flags",
+        "type": "boolean",
+        "default": "true",
+        "description": "Attempt to use Clang with *Default Compilation Flags* if they cannot be determined via Buck or `compile_commands.json`."
+      },
+      "defaultFlags": {
+        "title": "Default Compilation Flags",
+        "type": "array",
+        "default": [
+          "-std=c++14",
+          "-x",
+          "c++"
+        ],
+        "description": "List of default flags to use with Clang, if enabled.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "defaultDiagnostics": {
+        "title": "Enable Diagnostics With Default Flags",
+        "type": "boolean",
+        "default": "false",
+        "description": "Enable diagnostics even while using default flags. May lead to inaccurate results."
+      },
+      "serverProcessMemoryLimit": {
+        "title": "Clang server process memory limit",
+        "type": "integer",
+        "default": 15,
+        "description": "Total memory usage of all clang server processes may not exceed this percentage of total memory."
+      }
+    }
+  },
+  "activationHooks": [
+    "language-c:grammar-used",
+    "language-cpp14:grammar-used",
+    "language-objective-c:grammar-used"
+  ],
+  "consumedServices": {
+    "nuclide.clang.configuration": {
+      "versions": {
+        "0.0.0": "consumeClangConfigurationProvider"
+      }
+    }
+  },
+  "providedServices": {
+    "nuclide.clang.declaration-info": {
+      "versions": {
+        "0.0.0": "provideDeclarationInfo"
+      }
+    },
+    "nuclide.related-files.provider": {
+      "versions": {
+        "0.0.0": "provideRelatedFiles"
+      }
+    },
+    "nuclide-autocomplete.provider": {
+      "versions": {
+        "0.0.0": "createAutocompleteProvider"
+      }
+    },
+    "code-actions": {
+      "versions": {
+        "0.1.0": "provideCodeActions"
+      }
+    },
+    "code-format.file": {
+      "versions": {
+        "0.1.0": "provideCodeFormat"
+      }
+    },
+    "definitions": {
+      "versions": {
+        "0.1.0": "provideDefinitions"
+      }
+    },
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    },
+    "nuclide-type-hint.provider": {
+      "versions": {
+        "0.0.0": "createTypeHintProvider"
+      }
+    },
+    "outline-view": {
+      "versions": {
+        "0.1.0": "provideOutlineView"
+      }
+    },
+    "nuclide-refactor": {
+      "versions": {
+        "0.0.0": "provideRefactoring"
+      }
+    }
+  }
+}

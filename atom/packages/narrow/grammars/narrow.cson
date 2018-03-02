@@ -1,0 +1,7 @@
+# This grammar is useless now.
+# But many keymap example depends on [data-grammar="source narrow"] scope expression
+# So will keep for a while.
+name: "Narrow"
+scopeName: "source.narrow"
+fileTypes: []
+patterns: []

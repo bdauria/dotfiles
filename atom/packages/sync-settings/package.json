@@ -1,0 +1,79 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-118128-83456-1m6m8v4.k6lwi5dn29/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-118128-83456-1m6m8v4.k6lwi5dn29/package.tgz",
+        "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-118128-83456-1m6m8v4.k6lwi5dn29/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-118128-83456-jmzwho.homwzmpldi"
+    ]
+  ],
+  "_from": "../d-118128-83456-1m6m8v4.k6lwi5dn29/package.tgz",
+  "_id": "sync-settings@0.8.5",
+  "_inCache": true,
+  "_location": "/sync-settings",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-118128-83456-1m6m8v4.k6lwi5dn29/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-118128-83456-1m6m8v4.k6lwi5dn29/package.tgz",
+    "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-118128-83456-1m6m8v4.k6lwi5dn29/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-118128-83456-1m6m8v4.k6lwi5dn29/package.tgz",
+  "_shasum": "8c1819a8bd117c3fd45c520ea154ee9ba2193c5c",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-118128-83456-1m6m8v4.k6lwi5dn29/package.tgz",
+  "_where": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-118128-83456-jmzwho.homwzmpldi",
+  "bugs": {
+    "url": "https://github.com/atom-community/sync-settings/issues"
+  },
+  "commits": {
+    "url": "https://github.com/atom-community/sync-settings/commit"
+  },
+  "dependencies": {
+    "atom-space-pen-views": "^2.2.0",
+    "emissary": "~1.3.3",
+    "github": "^2.1.0",
+    "q": "~1.4.1",
+    "semver": "~5.2.0",
+    "underscore-plus": "^1.6.6"
+  },
+  "description": "Synchronize package settings, keymap and installed packages",
+  "devDependencies": {
+    "coffeelint": "^1.15.7"
+  },
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/atom-community/sync-settings#readme",
+  "keywords": [
+    "settings",
+    "productivity",
+    "manager",
+    "sync",
+    "backup",
+    "restore"
+  ],
+  "license": "MIT",
+  "main": "./lib/sync-settings",
+  "name": "sync-settings",
+  "optionalDependencies": {},
+  "readme": "# Sync Settings for Atom\n\n[![Join the chat at https://gitter.im/atom-community/sync-settings](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/atom-community/sync-settings?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\n[![Build Status](https://travis-ci.org/atom-community/sync-settings.svg?branch=master)](https://travis-ci.org/atom-community/sync-settings)\n\nSynchronize settings, keymaps, user styles, init script, snippets and installed packages across [Atom](http://atom.io) instances.\n\n## Features\n* Sync Atom's and package settings\n* Sync installed packages\n* Sync user keymaps\n* Sync user styles\n* Sync user init script\n* Sync snippets\n* Sync user defined text files\n\n### Note\n\nIt currently [does **not** support](https://github.com/atom-community/sync-settings/issues/317) automatic backup - it must be done manually. Only the restore is being triggered automatically.\n\n## Installation\n\n`$ apm install sync-settings` or using the Install packages pane from [Atom Settings](atom://config).\n\n## Setup\n\n1. Open **Sync Settings** configuration in [Atom Settings](atom://config).\n2. Create a [new personal access token](https://github.com/settings/tokens/new) which has the `gist` scope and be sure to **activate permissions**: Gist -> create gists.\n3. Copy the access token to **Sync Settings** configuration or set it as an environmental variable **GITHUB_TOKEN**.\n4. Create a [new gist](https://gist.github.com/):\n\n  - The description can be left empty. It will be set when invoking the `backup` command the first time.\n  - Use `packages.json` as the filename.\n  - Put some arbitrary non-empty content into the file. It will be overwritten by the first invocation of the `backup` command\n  - Save the gist.\n\n5. Copy the gist id (last part of url after the username) to **Sync Settings** configuration or set it as an environmental variable **GIST_ID**.\n\nDisclaimer: GitHub Gists are by default **public**. If you don't want other people to easily find your gist (i.e. if you use certain packages, storing auth-tokens, a malicious party could abuse them), you should make sure to **create a secret gist**.\n\n### Alternative **Sync Settings** configuration using Atom's config.cson\n\n1. Click on Menu \"Open Your Config\" to edit Atom's config.cson\n2. Use these keys:\n\n```js\n  \"sync-settings\":\n    gistId: \"b3025...88c41c\"\n    personalAccessToken: \"6a10cc207b....7a67e871\"\n```\n\n### Cloning a backup to a fresh Atom install\n\n1. Install the package from the command line: `apm install sync-settings`\n1. Launch Atom passing in **GITHUB_TOKEN** and **GIST_ID**. For example:\n```\nGITHUB_TOKEN=6a10cc207b....7a67e871 GIST_ID=b3025...88c41c atom\n```\n1. You will still need to make sure you add your gist id and github token to the **Sync Settings** configuration in [Atom Settings](atom://config) OR set them as environment variables in your shell configuration.\n\n## Usage\n\nOpen the Atom [Command Palette](https://github.com/atom/command-palette) where you can search for the following list of commands.\n\nBackup or restore all settings from the <kbd>Packages</kbd> menu or use one of the following **commands**:\n* `sync-settings:backup`\n* `sync-settings:restore`\n\nView your online backup using the following command:\n* `sync-settings:view-backup`\n\nCheck the latest backup is applied:\n* `sync-settings:check-backup`\n\nYou can also fork existing settings from a different GitHub user using the following command:\n* `sync-settings:fork`\n* In the following input field enter the Gist ID to fork\n\n## Running the tests\n\n1. Create a new [personal access token](https://github.com/settings/tokens/new) which has the `gist` scope and will be used for testing purposes.\n2. Export it with `export GITHUB_TOKEN=YOUR_TOKEN`\n3. Run `apm test`\n\n## Contributing\n\nIf you're going to submit a pull request, please try to follow\n[the official contribution guidelines of Atom](https://atom.io/docs/latest/contributing).\n\n1. [Fork it](https://github.com/atom-community/sync-settings/).\n2. Create your feature branch (`git checkout -b my-new-feature`).\n3. Ensure tests are passing. See [running-the-tests](https://github.com/atom-community/sync-settings#running-the-tests).\n4. Commit your changes (`git commit -am 'Add some feature'`).\n5. Push to the branch (`git push origin my-new-feature`).\n6. Create new Pull Request.\n\n[See all contributors](https://github.com/atom-community/sync-settings/graphs/contributors).\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atom-community/sync-settings.git"
+  },
+  "version": "0.8.5"
+}

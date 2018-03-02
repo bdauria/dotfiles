@@ -1,0 +1,54 @@
+{
+  ".source.js.jsx": {
+    "editor": {
+      "commentStart": "// ",
+      "foldEndPattern": "^\\s*\\}|^\\s*\\]|^\\s*\\)",
+      "increaseIndentPattern": "{[^}\"']*$|\\[[^\\]\"']*$|\\([^)\"']*$|^\\s*<[a-zA-Z][^/]*$|^\\s*>$",
+      "decreaseIndentPattern": "^\\s*(\\s*/[*].*[*]/\\s*)*[}\\])]|^\\s*(</|/>)",
+      "nonWordCharacters": "/\\()\"':,.;<>~!@#%^&*|+=[]{}`?-…"
+    }
+  },
+  ".source.inside-js.css.styled": {
+    "editor": {
+      "commentStart": "${'' /* ",
+      "commentEnd": " */}"
+    }
+  },
+  ".entity.quasi.element.js": {
+    "editor": {
+      "commentStart": "// "
+    },
+    "autocomplete": {
+      "symbols": {
+        "": {
+          "selector": ".source",
+          "typePriority": 1
+        }
+      }
+    }
+  },
+  ".meta.tag.jsx": {
+    "editor": {
+      "commentStart": "{/* ",
+      "commentEnd": " */}",
+      "increaseIndentPattern": "{[^}\"']*$|\\[[^\\]\"']*$|\\([^)\"']*$|<[a-zA-Z][^/]*$|^\\s*>$",
+      "decreaseIndentPattern": "^\\s*(\\s*/[*].*[*]/\\s*)*[}\\])]|^\\s*(</|/>)"
+    }
+  },
+  ".JSXAttrs": {
+    "editor": {
+      "commentStart": "// "
+    }
+  },
+  ".JSXNested": {
+    "editor": {
+      "commentStart": "{/* ",
+      "commentEnd": " */}"
+    }
+  },
+  ".graphql": {
+    "editor": {
+      "commentStart": "# "
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "nuclide-current-working-directory",
+  "main": "./lib/main.js",
+  "version": "0.0.0",
+  "description": "Provides the concept of a \"current\" directory",
+  "author": "NEEDS OWNER",
+  "atomTestRunner": "../../lib/test-runner-entry.js",
+  "nuclide": {
+    "packageType": "Atom",
+    "testRunner": "apm"
+  },
+  "activationCommands": {},
+  "providedServices": {
+    "nuclide-current-working-directory": {
+      "description": "Which of the directories in the project is the \"active\" one?",
+      "versions": {
+        "0.0.0": "provideApi"
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import 'ui-variables';
+
+.outline-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.outline-view-core {
+  display: flex;
+  flex-direction: column;
+  // Default font - this is overridden by the editor settings
+  font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  height: 100%;
+  width: 100%;
+}
+
+.outline-view-loading {
+  margin: auto;
+}
+
+.outline-view-trees-scroller {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.outline-view-trees {
+  display: inline-block; // so background doesn't get clipped and overflows
+  min-width: 100%;
+}
+
+.outline-view-trees .list-item {
+  padding: 0 @component-padding / 2;
+}
+
+.outline-view-trees.has-collapsable-children .list-nested-item > .list-tree > .list-item {
+  padding-left: @component-padding * 4;
+}
+
+.panel-heading .outline-view-close-button {
+  top: -0.25em;
+}
+
+.outline-view-search-bar {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: @component-icon-padding;
+  position: relative;
+}
+
+.outline-view-search-pane {
+  flex-grow: 1;
+}
+
+.outline-view-search-clear {
+  position: absolute;
+  right: 0;
+}

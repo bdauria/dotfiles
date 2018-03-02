@@ -1,0 +1,37 @@
+{
+  "name": "nuclide-metro",
+  "main": "./lib/main.js",
+  "version": "0.0.0",
+  "description": "Metro (JavaScript bundler) Atom-side package",
+  "author": "NEEDS OWNER",
+  "atomTestRunner": "../../lib/test-runner-entry.js",
+  "nuclide": {
+    "configMetadata": {
+      "pathComponents": [
+        "IDE",
+        "React Native"
+      ]
+    },
+    "packageType": "Atom",
+    "testRunner": "apm"
+  },
+  "consumedServices": {
+    "DEPRECATED-nuclide-output": {
+      "versions": {
+        "0.0.0": "consumeOutputService"
+      }
+    },
+    "nuclide-current-working-directory": {
+      "versions": {
+        "0.0.0": "consumeCwdApi"
+      }
+    }
+  },
+  "providedServices": {
+    "nuclide.metro": {
+      "versions": {
+        "0.0.0": "provideMetroAtomService"
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "nuclide-ocaml",
+  "main": "./lib/main.js",
+  "version": "0.0.0",
+  "description": "Provides support for OCaml in Nuclide",
+  "author": "NEEDS OWNER",
+  "activationCommands": {},
+  "atomTestRunner": "../../lib/test-runner-entry.js",
+  "nuclide": {
+    "configMetadata": {
+      "pathComponents": [
+        "Language",
+        "Ocaml"
+      ]
+    },
+    "config": {
+      "pathToMerlin": {
+        "title": "Path to Merlin Executable. Note that Atom configs aren't used for remote Nuclide.",
+        "type": "string",
+        "default": "ocamlmerlin"
+      },
+      "pathToRefmt": {
+        "title": "Path to refmt, the Reason formatter.",
+        "type": "string",
+        "default": "refmt"
+      },
+      "refmtFlags": {
+        "title": "Additional flags to pass to refmt",
+        "type": "string",
+        "default": ""
+      },
+      "enableDiagnostics": {
+        "title": "Enable diagnostic messages (e.g. compiler errors) from Merlin",
+        "description": "In some cases, Merlin cannot resolve all symbols, so many of its errors are just noise.",
+        "type": "boolean",
+        "default": true
+      },
+      "logLevel": {
+        "title": "Log Level",
+        "type": "string",
+        "default": "DEBUG",
+        "description": "Specify the level of logging. (restart to take effect)",
+        "enum": [
+          "ALL",
+          "TRACE",
+          "DEBUG",
+          "INFO",
+          "WARN",
+          "ERROR",
+          "FATAL",
+          "OFF"
+        ]
+      }
+    },
+    "packageType": "Atom",
+    "testRunner": "apm"
+  },
+  "activationHooks": [
+    "language-ocaml:grammar-used",
+    "nuclide-language-reason:grammar-used"
+  ]
+}

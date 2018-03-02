@@ -1,0 +1,107 @@
+'.source.ts':
+  'Angular Component':
+    'prefix': 'ng2-component'
+    'body': """
+      import { Component, OnInit } from '@angular/core';
+      @Component({
+        moduleId: module.id,
+        selector: '${1:selector}',
+        templateUrl: '${2:name}.component.html'
+      })
+      export class ${3:ComponentName}Component implements OnInit {
+        constructor() { }
+
+        ngOnInit() { }
+        $4
+      }
+    """
+  'Angular Service':
+    'prefix': 'ng2-service'
+    'body': """
+      import { Injectable } from '@angular/core';
+
+      @Injectable()
+      export class ${1:ServiceName}Service {
+
+        constructor() { }
+        $2
+      }
+    """
+  'Angular Pipe':
+    'prefix': 'ng2-pipe'
+    'body': """
+      import { Pipe, PipeTransform } from '@angular/core';
+
+      @Pipe({
+      	name: '${1:name}'
+      })
+
+      export class ${2:PipeName}Pipe implements PipeTransform {
+      	transform(value: any, args: any[]): any {
+      	$3
+      	}
+      }
+    """
+  'Angular Routes':
+    'prefix': 'ng2-routes'
+    'body': """
+      @Routes([
+      	{ path: '/${1:path}', component: ${2:Component} }$3
+      ])
+    """
+  'Angular RouteDefinition':
+    'prefix': 'ng2-route-path'
+    'body': "{ path: '/${1:path}', component: ${2:Component} }$3"
+  'Http.get':
+    'prefix': 'ng2-http-get'
+    'body': """
+      return this.http.get('${1:url}')
+      	.map((res: Response) => res.json()${2:});
+    """
+  'Subscribe':
+    'prefix': 'ng2-subscribe'
+    'body': """
+      this.${1:service}.${2:function}()
+      	.subscribe(${3:arg} => this.${4:property} = ${5:arg});
+      $6
+    """
+  'Angular Bootstrapping':
+    'prefix': 'ng2-bootstrap'
+    'body': """
+      import { enableProdMode } from '@angular/core';
+      import { bootstrap } from '@angular/platform-browser-dynamic';
+
+      import { ${1:AppComponent} } from './${2:name}.component';
+
+      // enableProdMode();
+
+      bootstrap(${1:AppComponent})
+      	.then(success => console.log(`Bootstrap success`))
+      	.catch(error => console.log(error));
+      $3
+    """
+  'AppComponent':
+    'prefix': 'ng2-component-root'
+    'body': """
+      import { Component } from '@angular/core';
+      import { HTTP_PROVIDERS } from '@angular/http';
+      import { Routes, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router';
+      import 'rxjs/Rx'; // load the full rxjs
+
+      @Component({
+      	moduleId: module.id,
+      	selector: '${1:selector}',
+      	templateUrl: '${2:name}.component.html',
+      	directives: [ROUTER_DIRECTIVES],
+      	providers: [
+        	HTTP_PROVIDERS,
+        	ROUTER_PROVIDERS
+      	]
+      })
+
+      @Routes([
+      	$3
+      ])
+
+      export class AppComponent {}
+    """

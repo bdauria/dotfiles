@@ -1,0 +1,297 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11789-97242-14xi0oq.qcvq7fzuxr/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11789-97242-14xi0oq.qcvq7fzuxr/package.tgz",
+        "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11789-97242-14xi0oq.qcvq7fzuxr/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-11789-97242-hd7uph.u0babp4x6r"
+    ]
+  ],
+  "_from": "../d-11789-97242-14xi0oq.qcvq7fzuxr/package.tgz",
+  "_id": "hyperclick@0.1.5",
+  "_inCache": true,
+  "_location": "/hyperclick",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11789-97242-14xi0oq.qcvq7fzuxr/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11789-97242-14xi0oq.qcvq7fzuxr/package.tgz",
+    "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11789-97242-14xi0oq.qcvq7fzuxr/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-11789-97242-14xi0oq.qcvq7fzuxr/package.tgz",
+  "_shasum": "bfd388a0798053e09d72c36175a4c88f75b1f57a",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11789-97242-14xi0oq.qcvq7fzuxr/package.tgz",
+  "_where": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-11789-97242-hd7uph.u0babp4x6r",
+  "bugs": {
+    "url": "https://github.com/facebook-atom/hyperclick/issues"
+  },
+  "configSchema": {
+    "darwinTriggerKeys": {
+      "title": "Trigger keys for macOS",
+      "description": "macOS: Combination of keys to activate Hyperclick while hovering for text",
+      "type": "string",
+      "default": "metaKey",
+      "enum": [
+        {
+          "value": "shiftKey",
+          "description": "shift + click"
+        },
+        {
+          "value": "shiftKey,ctrlKey",
+          "description": "shift + control + click"
+        },
+        {
+          "value": "shiftKey,ctrlKey,altKey",
+          "description": "shift + control + option + click"
+        },
+        {
+          "value": "shiftKey,ctrlKey,altKey,metaKey",
+          "description": "shift + control + option + command + click"
+        },
+        {
+          "value": "shiftKey,altKey",
+          "description": "shift + option + click"
+        },
+        {
+          "value": "shiftKey,altKey,metaKey",
+          "description": "shift + option + command + click"
+        },
+        {
+          "value": "shiftKey,metaKey",
+          "description": "shift + command + click"
+        },
+        {
+          "value": "ctrlKey",
+          "description": "control + click"
+        },
+        {
+          "value": "ctrlKey,metaKey",
+          "description": "control + command + click"
+        },
+        {
+          "value": "ctrlKey,altKey",
+          "description": "control + option + click"
+        },
+        {
+          "value": "ctrlKey,altKey,metaKey",
+          "description": "control + option + command + click"
+        },
+        {
+          "value": "altKey",
+          "description": "option + click"
+        },
+        {
+          "value": "altKey,metaKey",
+          "description": "option + command + click"
+        },
+        {
+          "value": "metaKey",
+          "description": "command + click"
+        }
+      ]
+    },
+    "linuxTriggerKeys": {
+      "title": "Trigger keys for Linux",
+      "description": "Linux: Combination of keys to activate Hyperclick while hovering for text",
+      "type": "string",
+      "default": "ctrlKey",
+      "enum": [
+        {
+          "value": "shiftKey",
+          "description": "shift + click"
+        },
+        {
+          "value": "shiftKey,ctrlKey",
+          "description": "shift + control + click"
+        },
+        {
+          "value": "shiftKey,ctrlKey,altKey",
+          "description": "shift + control + alt + click"
+        },
+        {
+          "value": "shiftKey,ctrlKey,altKey,metaKey",
+          "description": "shift + control + alt + meta + click"
+        },
+        {
+          "value": "shiftKey,altKey",
+          "description": "shift + alt + click"
+        },
+        {
+          "value": "shiftKey,altKey,metaKey",
+          "description": "shift + alt + meta + click"
+        },
+        {
+          "value": "shiftKey,metaKey",
+          "description": "shift + meta + click"
+        },
+        {
+          "value": "ctrlKey",
+          "description": "control + click"
+        },
+        {
+          "value": "ctrlKey,metaKey",
+          "description": "control + meta + click"
+        },
+        {
+          "value": "ctrlKey,altKey",
+          "description": "control + alt + click"
+        },
+        {
+          "value": "ctrlKey,altKey,metaKey",
+          "description": "control + alt + meta + click"
+        },
+        {
+          "value": "altKey",
+          "description": "alt + click"
+        },
+        {
+          "value": "altKey,metaKey",
+          "description": "alt + meta + click"
+        },
+        {
+          "value": "metaKey",
+          "description": "meta + click"
+        }
+      ]
+    },
+    "win32TriggerKeys": {
+      "title": "Trigger keys for Windows",
+      "description": "Windows: Combination of keys to activate Hyperclick while hovering for text",
+      "type": "string",
+      "default": "ctrlKey",
+      "enum": [
+        {
+          "value": "shiftKey",
+          "description": "shift + click"
+        },
+        {
+          "value": "shiftKey,ctrlKey",
+          "description": "shift + control + click"
+        },
+        {
+          "value": "shiftKey,ctrlKey,altKey",
+          "description": "shift + control + alt + click"
+        },
+        {
+          "value": "shiftKey,ctrlKey,altKey,metaKey",
+          "description": "shift + control + alt + meta + click"
+        },
+        {
+          "value": "shiftKey,altKey",
+          "description": "shift + alt + click"
+        },
+        {
+          "value": "shiftKey,altKey,metaKey",
+          "description": "shift + alt + meta + click"
+        },
+        {
+          "value": "shiftKey,metaKey",
+          "description": "shift + meta + click"
+        },
+        {
+          "value": "ctrlKey",
+          "description": "control + click"
+        },
+        {
+          "value": "ctrlKey,metaKey",
+          "description": "control + meta + click"
+        },
+        {
+          "value": "ctrlKey,altKey",
+          "description": "control + alt + click"
+        },
+        {
+          "value": "ctrlKey,altKey,metaKey",
+          "description": "control + alt + meta + click"
+        },
+        {
+          "value": "altKey",
+          "description": "alt + click"
+        },
+        {
+          "value": "altKey,metaKey",
+          "description": "alt + meta + click"
+        },
+        {
+          "value": "metaKey",
+          "description": "meta + click"
+        }
+      ]
+    }
+  },
+  "consumedServices": {
+    "hyperclick.provider": {
+      "versions": {
+        "0.0.0": "addLegacyProvider"
+      }
+    },
+    "hyperclick": {
+      "versions": {
+        "0.1.0": "addProvider"
+      }
+    }
+  },
+  "dependencies": {},
+  "description": "Pluggable text-clicking UI for Atom",
+  "devDependencies": {
+    "atom-ide-ui": "0.2.0",
+    "babili-webpack-plugin": "^0.1.2",
+    "preact": "^8.1.0",
+    "preact-compat": "^3.16.0",
+    "webpack": "^3.0.0"
+  },
+  "engines": {
+    "atom": ">=1.1.0"
+  },
+  "homepage": "https://github.com/facebook-atom/hyperclick#readme",
+  "keywords": [
+    "hyperclick",
+    "nuclide"
+  ],
+  "license": "BSD-3-Clause",
+  "name": "hyperclick",
+  "optionalDependencies": {},
+  "providedServices": {
+    "hyperclick.observeTextEditor": {
+      "versions": {
+        "0.0.0": "observeTextEditor"
+      }
+    }
+  },
+  "readme": "# Hyperclick\n\n**NOTE**: This package is now a bundled version of the code in [`atom-ide-ui`](https://atom.io/packages/atom-ide-ui). Please refer to the [`atom-ide-ui` repository](https://github.com/facebook-atom/atom-ide-ui/tree/master/modules/atom-ide-ui/pkg/hyperclick) to view or modify the source.\n\nPluggable text-clicking UI for [Atom](https://atom.io/).\n\nHyperclick is triggered by two events:\n- `<cmd>` or `<cmd-mousemove>` underlines clickable text under the mouse.\n- `<cmd-mousedown>` performs the action associated with the clickable text.\n- `<cmd-alt-enter>` performs the action on the text under the cursor.\n\n## Known Providers\n\nCheck out the wiki: https://github.com/facebook-atom/hyperclick/wiki/Known-Providers\n\n## Demo\n\nInstall `hyperclick` with this [demo package](https://github.com/oclbdk/hyperclick-provider-demo)\nto recreate the screencast below.\n\n![hyperclick-demo](https://thumbs.gfycat.com/EcstaticEvilEstuarinecrocodile-size_restricted.gif)\n\n## Provider API\n\n### Example\n\nDeclare the provider callback in the `package.json` (e.g. `getProvider`).\n\n```js\n\"providedServices\": {\n  \"hyperclick\": {\n    \"versions\": {\n      \"0.1.0\": \"getProvider\"\n    }\n  }\n}\n```\n\nNOTE: Providers for `hyperclick.provider@0.0.0` are still accepted, but that naming is now deprecated.\nPlease use `hyperclick@0.1.0` for new providers.\n\nDefine the provider callback in `lib/main.js`.\n\n```js\nexport function getProvider() {\n  return {\n    priority: 1\n    grammarScopes: ['source.js'], // JavaScript files\n    getSuggestionForWord(\n      textEditor: TextEditor,\n      text: string,\n      range: Range\n    ): ?HyperclickSuggestion {\n      return {\n        // The range(s) to underline as a visual cue for clicking.\n        range,\n        // The function to call when the underlined text is clicked.\n        callback() {},\n      };\n    },\n  };\n}\n```\n\n### Details\n\nYou must define one of these methods on the provider:\n\n- `getSuggestionForWord(textEditor: TextEditor, text: string, range: Range)`\n\n  Use this to provide a suggestion for single-word matches.\n  Optionally set `wordRegExp` on the provider to adjust word-matching.\n\n  - `textEditor`: The text editor the event originated from.\n  - `text`: The string containing the word under the mouse.\n  - `range`: The buffer position of `text` in the text editor.\n\n- `getSuggestion(textEditor: TextEditor, position: Point)`\n\n  Use this to provide a suggestion if it can have non-contiguous ranges.\n  A primary use-case for this is Objective-C methods.\n\n  - `textEditor`: The text editor the event originated from.\n  - `position`: The buffer position of the mouse in the text editor.\n\nThe methods return a suggestion or a `Promise` that resolves to a suggestion:\n\n- `range`: A range or array of ranges to underline as a visual cue for clicking.\n\n  To distinguish ranges and arrays, this can't be a Range-compatible array.\n  For example, use `new Range([0, 0], [0, 10])` instead of `[[0, 0], [0, 10]]`.\n\n- `callback`: The function to call when the underlined text is clicked.\n\n  If there are multiple possibilities, this can be an array of objects with:\n\n    - `title`: A string to present in the UI for the user to select.\n    - `rightLabel`(optional): An indicator denoting the \"kind\" of suggestion this represents\n    - `callback`: The function to call when the user selects this object.\n\nAdditional provider fields:\n\n- `priority`: The higher this is, the more precedence the provider gets.\n\n  Hyperclick only returns suggestions from a single provider, so this is a\n  workaround for providers to override others. `priority` defaults to 0.\n\n- `grammarScopes`: An (optional) `Array` of grammar `scopeNames` to provide suggestions for.\n  Your provider will only be triggered in matching text editors.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facebook-atom/hyperclick.git"
+  },
+  "scripts": {
+    "release": "./scripts/release.sh"
+  },
+  "version": "0.1.5",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".js": [
+        "index.js"
+      ],
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

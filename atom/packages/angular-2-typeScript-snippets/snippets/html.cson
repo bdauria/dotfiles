@@ -1,0 +1,67 @@
+'.text.html':
+  'ngClass':
+    'prefix': 'ng2-ngClass'
+    'description': 'Angular 2 ngClass snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/api/common/index/NgClass-directive.html'
+    'body': """
+    [ngClass]="${1:cssClass}: ${2:expression}"
+    """
+  'ngFor':
+    'prefix': 'ng2-ngFor'
+    'description': 'Angular 2 *ngFor snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/api/common/NgFor-directive.html'
+    'body': """
+    *ngFor="let ${1:item} of ${2:list}"
+    """
+  'ngIf':
+    'prefix': 'ng2-ngIf'
+    'description': 'Angular 2 *ngIf snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/api/common/index/NgIf-directive.html'
+    'body': """
+    *ngIf="${1:expression}"
+    """
+  'ngModel':
+    "prefix": 'ng2-ngModel'
+    'description': 'Angular 2 ngModel snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/api/common/index/NgModel-directive.html'
+    'body': """
+    [(ngModel)]="${1:binding}"
+    """
+  'ngPropertyBinding':
+    "prefix": 'ng2-property'
+    'description': 'Angular 2 property binding'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/guide/architecture.html#!#data-binding'
+    'body': """
+    [${1:property}]="${2:value}"
+    """
+  'ngEventBinding':
+    "prefix": 'ng2-event'
+    'description': 'Angular 2 event binding'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/guide/architecture.html#!#data-binding'
+    'body': """
+    (${1:event})="${2:callback}()"
+    """
+  'ngRouterLink':
+    'prefix': 'ng2-routerLink'
+    'description': 'Angular 2 routerLink snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/api/router/RouterLink-directive.html'
+    'body': """
+    [routerLink]="${1:routeName}"
+    """
+  'ngStyle':
+    'prefix': 'ng2-ngStyle'
+    'description': 'Angular 2 ngStyle snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/api/common/NgStyle-directive.html'
+    'body': """
+    [ngStyle]="'${1:style}': ${2:expression}"
+    """
+  'ngSwitch':
+    'prefix': 'ng2-ngSwitch'
+    'description': 'Angular 2 ngSwitch snippet'
+    'descriptionMoreURL': 'https://angular.io/docs/ts/latest/api/common/index/NgSwitch-directive.html'
+    'body': """
+    <div [ngSwitch]="${1:conditionExpression}">
+      <div *ngSwitchCase="${2:expression}">${3:output}</div>
+      <div *ngSwitchDefault>${4:output2}</div>
+    </div>
+    """

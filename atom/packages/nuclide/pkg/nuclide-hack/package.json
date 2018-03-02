@@ -1,0 +1,61 @@
+{
+  "name": "nuclide-hack",
+  "main": "./lib/main.js",
+  "version": "0.0.0",
+  "description": "Provides hack language support in Nuclide",
+  "author": "NEEDS OWNER",
+  "atomTestRunner": "../../lib/test-runner-entry.js",
+  "nuclide": {
+    "configMetadata": {
+      "pathComponents": [
+        "Language",
+        "Hack"
+      ]
+    },
+    "config": {
+      "hhClientPath": {
+        "title": "Overrides default path for hh_client.",
+        "type": "string",
+        "default": "",
+        "description": "Primarily for testing new versions of hh_client."
+      },
+      "legacyHackIde": {
+        "title": "Use legacy Hack IDE services.",
+        "type": "boolean",
+        "default": false,
+        "description": "Requires restart. Intended only for HHVM <= 3.22. Not supported."
+      },
+      "logLevel": {
+        "title": "Log Level",
+        "type": "string",
+        "default": "DEBUG",
+        "description": "Specify that level of logging, supported values: ALL | TRACE | DEBUG | INFO | WARN | ERROR | FATAL | OFF.",
+        "enum": [
+          "ALL",
+          "TRACE",
+          "DEBUG",
+          "INFO",
+          "WARN",
+          "ERROR",
+          "FATAL",
+          "OFF"
+        ]
+      }
+    },
+    "packageType": "Atom",
+    "testRunner": "apm"
+  },
+  "providedServices": {
+    "nuclide-project-symbol-search-service": {
+      "versions": {
+        "0.0.0": "registerProjectSymbolSearchProvider"
+      }
+    },
+    "nuclide-quick-open-register-provider": {
+      "description": "Register ourselves with the quick-open package",
+      "versions": {
+        "0.0.0": "registerQuickOpenProvider"
+      }
+    }
+  }
+}

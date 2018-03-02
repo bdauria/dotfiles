@@ -1,0 +1,12 @@
+{
+  "name": "nuclide-ui",
+  "main": "./main.js",
+  "version": "0.0.0",
+  "description": "Nuclide user interface components",
+  "author": "Nuclide : Core UI",
+  "atomTestRunner": "../../lib/test-runner-entry.js",
+  "nuclide": {
+    "packageType": "Atom",
+    "testRunner": "apm"
+  }
+}

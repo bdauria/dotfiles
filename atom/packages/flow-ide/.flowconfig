@@ -1,0 +1,14 @@
+[ignore]
+
+[include]
+
+[libs]
+decls
+
+[options]
+module.system=node
+include_warnings=true
+suppress_comment= \\(.\\|\n\\)*\\$FlowIgnore
+
+[lints]
+all=warn

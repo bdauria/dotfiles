@@ -1,0 +1,70 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11755-67757-1rvxau5.vwsotuik9/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11755-67757-1rvxau5.vwsotuik9/package.tgz",
+        "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11755-67757-1rvxau5.vwsotuik9/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-11755-67757-q83scm.c3s6lgnwmi"
+    ]
+  ],
+  "_from": "../d-11755-67757-1rvxau5.vwsotuik9/package.tgz",
+  "_id": "dracula-ui@0.6.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/dracula-ui",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11755-67757-1rvxau5.vwsotuik9/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11755-67757-1rvxau5.vwsotuik9/package.tgz",
+    "spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11755-67757-1rvxau5.vwsotuik9/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-11755-67757-1rvxau5.vwsotuik9/package.tgz",
+  "_shasum": "9318cb356a76d5120566c3b274c3526cfbb21a64",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/d-11755-67757-1rvxau5.vwsotuik9/package.tgz",
+  "_where": "/private/var/folders/q1/ncmcgyrj6m78zg5m1_t_78hc0000gn/T/apm-install-dir-11755-67757-q83scm.c3s6lgnwmi",
+  "bugs": {
+    "url": "https://github.com/dracula/atom-ui/issues"
+  },
+  "dependencies": {},
+  "description": "dracula UI theme for Atom",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">1.13.0"
+  },
+  "homepage": "https://github.com/dracula/atom-ui#readme",
+  "license": "MIT",
+  "name": "dracula-ui",
+  "optionalDependencies": {},
+  "readme": "# Dracula for Atom UI\n\n> A dark theme for Atom UI\n\n![Screenshot](https://github.com/dracula/atom-ui/blob/master/ss.png?raw=true)\n\n## Install\n\nInstall using Atom\n\n1. Go to Atom -> Preferences...\n2. Then select the Install tab\n3. Click the Themes button to the right of the search box\n4. Enter dracula-ui in the search box\n\n\n## Team\n\nThis theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/dracula/atom-ui/graphs/contributors).\n\n[![ichi](https://avatars.githubusercontent.com/ichi0g0y?v=3&s=70)](https://github.com/ichi0g0y) |\n--- |\n[ichi](https://github.com/ichi0g0y) |\n\n\n## Thanks to\n+ [madhead](https://github.com/madhead/lavender-ui)\n+ [One Dark UI](https://github.com/atom/one-dark-ui) team\n\n## License\n\n[MIT License](./LICENSE)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dracula/atom-ui.git"
+  },
+  "theme": "ui",
+  "version": "0.6.0",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
