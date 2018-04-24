@@ -1,6 +1,0 @@
-{
-  "atom-workspace atom-text-editor:not(.mini)": {
-    "alt-shift-up": "nuclide-syntactic-selection:expand",
-    "alt-shift-down": "nuclide-syntactic-selection:collapse"
-  }
-}

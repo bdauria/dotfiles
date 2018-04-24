@@ -1,5 +1,0 @@
-{
-  "compileOnSave": false,
-  "extends": "../lib/tsconfig.json",
-  "include": ["./**/*.ts", "./**/*.tsx", "../lib/**/*.ts", "../lib/**/*.tsx"]
-}

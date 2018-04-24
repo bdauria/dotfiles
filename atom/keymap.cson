@@ -62,10 +62,10 @@
   'space i': 'import-js:import'
   'à': 'intentions:highlight'
   'space c': 'editor:toggle-line-comments'
-  # 'space f': 'clang-format:format'
   'space e': 'expand-region:expand'
   'space ,': 'expand-region:shrink'
   'space *': 'narrow:scan-by-current-word'
+  'space /': 'narrow:search-by-current-word'
   'space j': 'import-js:import'
   'space f': 'linter-eslint:fix-file'
 

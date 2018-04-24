@@ -60,3 +60,16 @@
         }
       }
     """
+  'Mocha test':
+    'prefix': 'moc'
+    'body': """
+      'use strict'
+
+      const sinon = require('sinon');
+      const chai = require('chai');
+      const expect = chai.expect;
+
+      describe('$1', function() {
+
+      });
+    """

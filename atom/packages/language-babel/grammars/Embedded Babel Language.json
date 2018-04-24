@@ -1,9 +1,0 @@
-{
-  "scopeName": "source.embedded.js.jsx",
-  "injectionSelector": "source.embedded.jsx",
-  "patterns": [
-    {
-      "include": "source.js.jsx"
-    }
-  ]
-}

@@ -1,42 +1,33 @@
 "*":
-  "atom-beautify":
-    general:
-      _analyticsUserId: "da4e6afd-1cd1-40a6-bef1-51919a86373f"
-    html:
-      beautify_on_save: true
-      default_beautifier: "Pretty Diff"
-      indent_inner_html: true
-    js:
-      break_chained_methods: true
-      indent_size: 2
-      jslint_happy: true
-    typescript:
-      break_chained_methods: true
-      indent_size: 2
-      jslint_happy: true
-      wrap_line_length: 80
   "atom-ide-ui":
-    "atom-ide-diagnostics-ui":
-      useExperimentalUi: true
+    "atom-ide-datatip":
+      onlyTopDatatip: true
+    use: {}
+  "atom-karma-test-runner":
+    karmaConfigFileName: "test/karma.conf.js"
+    nodeBinaryPath: "/Users/bruno/.nvm/versions/node/v8.9.4/bin/node"
+    runActiveFileOnly: true
   "atom-material-ui":
-    colors: {}
-  "atom-package-deps":
-    ignored: []
-  "atom-ternjs":
-    excludeLowerPriorityProviders: true
-    useSnippets: true
-  "atom-typescript":
-    preferredQuoteCharacter: "'"
+    colors:
+      abaseColor: "#009789"
+      accentColor: "#b00010"
+      genAccent: true
+      paintCursor: true
+    tabs:
+      compactTabs: true
+    ui:
+      panelContrast: true
+      panelShadows: true
   "autocomplete-plus":
-    useCoreMovementCommands: false
-  "choose-pane":
-    labelChars: "BÉPOÈAUIE,"
+    suppressActivationForEditorClasses: [
+      "narrow"
+    ]
   core:
     customFileTypes:
       "source.ini": [
         ".buckconfig"
-        ".flowconfig"
         ".hgrc"
+        ".flowconfig"
       ]
       "source.json": [
         "BUCK.autodeps"
@@ -45,117 +36,45 @@
         "BUCK"
       ]
     disabledPackages: [
-      "sync-settings"
-      "atom-keyboard-macros-vim"
-      "linter-flow"
-      "flow-ide"
-      "ide-typescript"
-      "atom-typescript"
       "linter"
-      "react"
-      "atom-ide-ui"
-      "ide-flowtype"
       "tree-view"
-      "platformio-ide-terminal"
+      "atom-ide-ui"
     ]
-    packagesWithKeymapsDisabled: [
-      "color-tabs"
-      "platformio-ide-terminal"
-    ]
-    telemetryConsent: "no"
+    telemetryConsent: "limited"
     themes: [
       "atom-material-ui"
-      "oceanic-next"
+      "atom-material-syntax"
     ]
-  editor:
-    fontSize: 13
-    softWrap: true
-    tabType: "soft"
   "exception-reporting":
-    userId: "19c9b716-e89a-e319-f263-a6c8ce6e1c28"
-  "flow-ide":
-    executablePath: "flow"
-  "ide-flowtype":
-    customFlowPath:
-      flowPath: "flow"
-    tryFlowBin: true
-  "lazy-motion":
-    showDeprecationWarning: false
-  linter: {}
-  "linter-eslint": {}
-  "linter-ui-default":
-    panelHeight: 218
+    userId: "1e5e45d3-b12d-4bfa-9a8b-7ffb33f28405"
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
   narrow:
-    notifiedVimModePlusSpecificDefaultKeymap: true
-  ng2ComponentGenerator:
-    files:
-      component:
-        create: true
-        extension: "ts"
-      css:
-        create: true
-        extension: "css"
-      html:
-        create: true
-        extension: "html"
-      module:
-        create: true
-        extension: "ts"
+    locationToOpen: "center"
+    useAdjacentPane: "never"
   nuclide:
-    "atom-ide-code-format":
-      formatOnType: false
-    "nuclide-file-tree":
-      showUncommittedChanges: false
-    "nuclide-flow":
-      canUseFlowBin: true
-      enablePushDiagnostics: true
-      lazyServer: true
-      pathToFlow: "node_modules/.bin/flow"
     "nuclide-home":
       showHome: false
-  pigments:
-    autocompleteSuggestionsFromValue: true
-    extendAutocompleteToColorValue: true
-  "platformio-ide-terminal":
-    core: {}
-    style:
-      defaultPanelHeight: "200px"
-    toggles:
-      cursorBlink: false
+    use: {}
   "prettier-atom":
-    formatOnSaveOptions:
-      enabled: true
-      showInStatusBar: true
-    prettierEslintOptions: {}
     prettierOptions:
-      jsxBracketSameLine: true
+      arrowParens: "always"
       singleQuote: true
-    useEslint: true
-  "project-manager":
-    savePathsRelativeToHome: true
-  react:
-    disableAutoClose: true
-    enabledForAllJavascriptFiles: true
-  "tree-view":
-    hideVcsIgnoredFiles: true
+      trailingComma: "es5"
+  "seti-ui":
+    compactView: true
+    themeColor: "Red"
   "vim-mode-plus":
-    blackholeRegisteredOperators: [
-      "change*"
-      "substitute*"
+    clearMultipleCursorsOnEscapeInsertMode: true
+    hideCommandsFromCommandPalette: true
+    highlightSearchExcludeScopes: [
+      "narrow"
     ]
-    findAcrossLines: true
-    keymapPToPutWithAutoIndent: true
+    keymapSemicolonAndCommaToFindPreConfirmedOnFindInput: true
     keymapYToYankToLastCharacterOfLine: true
-    reuseFindForRepeatFind: true
     sequentialPaste: true
     useSmartcaseForFind: true
     useSmartcaseForSearch: true
+    useSmartcaseForSearchCurrentWord: true
   welcome:
     showOnStartup: false
-".basic.html.text":
-  editor:
-    softWrap: true
-    softWrapHangingIndent: 2
-".source.ts":
-  editor:
-    softWrap: true
