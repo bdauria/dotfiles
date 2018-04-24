@@ -7,6 +7,15 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'w0rp/ale'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'janko-m/vim-test'
+Plug 'terryma/vim-expand-region'
+Plug 'sbdchd/neoformat'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 call plug#end()
 
 colorscheme vim-material
@@ -14,6 +23,9 @@ set clipboard=unnamedplus
 let base16colorspace=256
 set termguicolors
 set relativenumber
+set colorcolumn=80
+highlight ColorColumn guibg=#4f525b
+let g:airline_theme='material'
 
 let mapleader = "\<Space>"
 
@@ -64,12 +76,58 @@ noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
 map <C-p> :FZF<CR>
-map <C-b> :BLines<CR>
+map <C-l> :BLines<CR>
+map <C-b> :Buffers<CR>
 map <C-g> :GitFiles<CR>
 map <Leader>t :BTags<CR>
 map <Leader>a :Ag<CR>
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
+
+" Smart way to move between windows
+map wt <C-W>j
+map ws <C-W>k
+map wc <C-W>h
+map wr <C-W>l
+
+" Close the current buffer
+map <leader>bd :Bclose<cr>:tabclose<cr>gT
+
+" Close all the buffers
+map <leader>ba :bufdo bd<cr>
+
+map <leader>l :bnext<cr>
+map <leader>h :bprevious<cr>
+
+" Useful mappings for managing tabs
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove 
+map <leader>c :tabnext<cr>
+map <leader>r :tabprev<cr>
+
+" vim-test mappings
+nmap <silent> <leader><C-n> :TestNearest<CR> " t Ctrl+n
+nmap <silent> <leader><C-f> :TestFile<CR>    " t Ctrl+f
+nmap <silent> <leader><C-s> :TestSuite<CR>   " t Ctrl+s
+nmap <silent> <leader><C-l> :TestLast<CR>    " t Ctrl+l
+nmap <silent> <leader><C-g> :TestVisit<CR>   " t Ctrl+g
+
+" Remap VIM 0 to first non-blank character
+map 0 ^
+
+" Move a line of text using ALT+[jk] or Command+[jk] on mac
+nmap <M-t> mz:m+<cr>`z
+nmap <M-s> mz:m-2<cr>`z
+vmap <M-t> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <M-s> :m'<-2<cr>`>my`<mzgv`yo`z
+
+" Expand region mapping
+map <leader>e <Plug>(expand_region_expand)
+map <leader>, <Plug>(expand_region_shrink)
+
+map <leader>cv :e ~/.config/nvim/init.vim<CR>
 
 let g:fzf_action = {
   \ 'ctrl-j': 'tab split',
@@ -95,6 +153,13 @@ let g:LanguageClient_serverCommands = {
     \ 'javascript': ['javascript-typescript-stdio'],
     \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
     \ }
+
+let g:ale_linters = {
+\   'javascript': ['eslint', 'jshint'],
+\}
+let g:ale_fixers = {
+\   'javascript': ['eslint', 'jshint'],
+\}
 
 set hidden
 
