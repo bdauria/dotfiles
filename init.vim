@@ -3,9 +3,9 @@ Plug 'hzchirs/vim-material'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+      \ 'branch': 'next',
+      \ 'do': 'bash install.sh',
+      \ }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
@@ -14,19 +14,36 @@ Plug 'janko-m/vim-test'
 Plug 'terryma/vim-expand-region'
 Plug 'sbdchd/neoformat'
 Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+      \ 'do': 'yarn install',
+      \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+Plug 'tpope/vim-commentary'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-fugitive'
+" Plug 'terryma/vim-multiple-cursors'
+Plug 'ternjs/tern_for_vim'
+
 call plug#end()
 
+" Color settings
 colorscheme vim-material
+highlight ColorColumn guibg=#4f525b
+let g:airline_theme='material'
+
+" General settings
+set tabstop=2
+set shiftwidth=2
+set expandtab
 set clipboard=unnamedplus
 let base16colorspace=256
 set termguicolors
 set relativenumber
 set colorcolumn=80
-highlight ColorColumn guibg=#4f525b
-let g:airline_theme='material'
+let g:deoplete#enable_at_startup = 1
+set ignorecase
+set smartcase
+set splitright
 
+" Key mappings
 let mapleader = "\<Space>"
 
 " {W} -> [É]
@@ -77,7 +94,7 @@ vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
 map <C-p> :FZF<CR>
 map <C-l> :BLines<CR>
-map <C-b> :Buffers<CR>
+map <C-tab> :Buffers<CR>
 map <C-g> :GitFiles<CR>
 map <Leader>t :BTags<CR>
 map <Leader>a :Ag<CR>
@@ -91,7 +108,7 @@ map wc <C-W>h
 map wr <C-W>l
 
 " Close the current buffer
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
+map <esc> :bd<cr>
 
 " Close all the buffers
 map <leader>ba :bufdo bd<cr>
@@ -128,38 +145,42 @@ map <leader>e <Plug>(expand_region_expand)
 map <leader>, <Plug>(expand_region_shrink)
 
 map <leader>cv :e ~/.config/nvim/init.vim<CR>
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" : deoplete#manual_complete()
 
 let g:fzf_action = {
-  \ 'ctrl-j': 'tab split',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit'
-  \ }
+      \ 'ctrl-j': 'tab split',
+      \ 'ctrl-x': 'split',
+      \ 'ctrl-v': 'vsplit'
+      \ }
 
 let g:LanguageClient_autoStart = 1
 
 " <leader>ld to go to definition
 autocmd FileType javascript nnoremap <buffer>
-  \ <leader>ld :call LanguageClient_textDocument_definition()<cr>
+      \ <leader>ld :call LanguageClient_textDocument_definition()<cr>
 " <leader>lh for type info under cursor
 autocmd FileType javascript nnoremap <buffer>
-  \ <leader>lh :call LanguageClient_textDocument_hover()<cr>
+      \ <leader>lh :call LanguageClient_textDocument_hover()<cr>
 " <leader>lr to rename variable under cursor
 autocmd FileType javascript nnoremap <buffer>
-  \ <leader>lr :call LanguageClient_textDocument_rename()<cr>
+      \ <leader>lr :call LanguageClient_textDocument_rename()<cr>
 autocmd FileType javascript nnoremap <buffer>
-  \ <leader>lf :call LanguageClient_textDocument_documentSymbol()<cr>
+      \ <leader>lf :call LanguageClient_textDocument_documentSymbol()<cr>
 
 let g:LanguageClient_serverCommands = {
-    \ 'javascript': ['javascript-typescript-stdio'],
-    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
-    \ }
+      \ 'javascript': ['javascript-typescript-stdio'],
+      \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+      \ }
 
 let g:ale_linters = {
-\   'javascript': ['eslint', 'jshint'],
-\}
+      \   'javascript': ['eslint', 'jshint'],
+      \}
 let g:ale_fixers = {
-\   'javascript': ['eslint', 'jshint'],
-\}
+      \   'javascript': ['eslint', 'jshint'],
+      \}
+
+let test#javascript#mocha#file_pattern = '_test\.js'
 
 set hidden
 
