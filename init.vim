@@ -21,6 +21,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 " Plug 'terryma/vim-multiple-cursors'
 Plug 'ternjs/tern_for_vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'szw/vim-maximizer'
 
 call plug#end()
 
@@ -38,10 +41,16 @@ let base16colorspace=256
 set termguicolors
 set relativenumber
 set colorcolumn=80
-let g:deoplete#enable_at_startup = 1
 set ignorecase
 set smartcase
 set splitright
+set hidden
+
+" Automatically read a file when changed on the disk 
+set autoread
+au CursorHold * checktime  
+
+let g:deoplete#enable_at_startup = 1
 
 " Key mappings
 let mapleader = "\<Space>"
@@ -148,11 +157,32 @@ map <leader>cv :e ~/.config/nvim/init.vim<CR>
 inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>" : deoplete#manual_complete()
 
+" vim-surround mappings
+let g:surround_no_mappings = 1
+nmap ds  <Plug>Dsurround
+nmap hs  <Plug>Csurround
+nmap ys  <Plug>Ysurround
+nmap yS  <Plug>YSurround
+nmap yss <Plug>Yssurround
+nmap ySs <Plug>YSsurround
+nmap ySS <Plug>YSsurround
+xmap S   <Plug>VSurround
+xmap gS  <Plug>VgSurround
+if !hasmapto("<Plug>Isurround","i") && "" == mapcheck("<C-S>","i")
+  imap    <C-S> <Plug>Isurround
+endif
+imap      <C-G>s <Plug>Isurround
+imap      <C-G>S <Plug>ISurround
+
 let g:fzf_action = {
       \ 'ctrl-j': 'tab split',
       \ 'ctrl-x': 'split',
       \ 'ctrl-v': 'vsplit'
       \ }
+
+nnoremap <silent><F3> :MaximizerToggle<CR>
+vnoremap <silent><F3> :MaximizerToggle<CR>gv
+inoremap <silent><F3> <C-o>:MaximizerToggle<CR>
 
 let g:LanguageClient_autoStart = 1
 
@@ -168,11 +198,16 @@ autocmd FileType javascript nnoremap <buffer>
 autocmd FileType javascript nnoremap <buffer>
       \ <leader>lf :call LanguageClient_textDocument_documentSymbol()<cr>
 
+" LanguageClient settings
 let g:LanguageClient_serverCommands = {
       \ 'javascript': ['javascript-typescript-stdio'],
       \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
       \ }
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
+" ALE settings
 let g:ale_linters = {
       \   'javascript': ['eslint', 'jshint'],
       \}
@@ -180,10 +215,13 @@ let g:ale_fixers = {
       \   'javascript': ['eslint', 'jshint'],
       \}
 
+" vim-test settings
 let test#javascript#mocha#file_pattern = '_test\.js'
 
-set hidden
+" Apply macro to all selected lines
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction
